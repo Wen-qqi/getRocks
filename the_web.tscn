@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://j3kx3kj0fwyb"]
+
+[ext_resource type="Script" uid="uid://copt2wni8sw1x" path="res://the_web.gd" id="1_1kbs8"]
+[ext_resource type="Texture2D" uid="uid://bqxef1y0bmhc0" path="res://art/white.jpg" id="2_u64re"]
+
+[node name="TheWeb" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1kbs8")
+
+[node name="Browser" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TabBar" type="TabContainer" parent="Browser"]
+layout_mode = 2
+current_tab = 0
+clip_tabs = false
+
+[node name="ERockTab" type="Label" parent="Browser/TabBar"]
+layout_mode = 2
+text = "This is test text"
+metadata/_tab_index = 0
+
+[node name="Background" type="TextureRect" parent="Browser/TabBar/ERockTab"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_u64re")
+
+[node name="RockProTab" type="Label" parent="Browser/TabBar"]
+visible = false
+layout_mode = 2
+text = "RockPro"
+metadata/_tab_index = 1
+
+[node name="RockBookTab" type="Label" parent="Browser/TabBar"]
+visible = false
+layout_mode = 2
+text = "RockBook"
+metadata/_tab_index = 2
+
+[node name="TEST_BUTTON" type="Label" parent="Browser/TabBar"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="WebpageContent" type="PanelContainer" parent="Browser"]
+layout_mode = 2
+
+[node name="ERockWebpage" type="Control" parent="Browser/WebpageContent"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Browser/WebpageContent/ERockWebpage"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Browser/WebpageContent/ERockWebpage/MarginContainer"]
+layout_mode = 2
+
+[node name="RockListingERock" type="VBoxContainer" parent="Browser/WebpageContent/ERockWebpage/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="RockProWebpage" type="Control" parent="Browser/WebpageContent"]
+layout_mode = 2
+
+[node name="RockBookWebpage" type="Control" parent="Browser/WebpageContent"]
+layout_mode = 2
+
+[node name="ExitBuy" type="Button" parent="."]
+layout_mode = 2
+offset_top = 70.0
+offset_right = 469.0
+offset_bottom = 101.0
+text = "EXIT"

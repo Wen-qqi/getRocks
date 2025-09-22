@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpj1rghvcvmno"]
+
+[ext_resource type="Script" uid="uid://beg3p0xush3fu" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dehbv7vhr5cuq" path="res://art/green_wall_room.webp" id="1_ig7tw"]
+
+[node name="MainPage" type="Node"]
+script = ExtResource("1_0xm2m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ig7tw")
+
+[node name="Menu" type="HBoxContainer" parent="."]
+offset_right = 180.0
+offset_bottom = 40.0
+
+[node name="Buy" type="Button" parent="Menu"]
+layout_mode = 2
+text = "BUY"
+
+[node name="Design" type="Button" parent="Menu"]
+layout_mode = 2
+
+[node name="Archive" type="Button" parent="Menu"]
+layout_mode = 2
+text = "ARCHIVE"
+
+[node name="Button4" type="Button" parent="Menu"]
+layout_mode = 2
+text = "breh"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
