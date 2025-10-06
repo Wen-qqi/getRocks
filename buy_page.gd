@@ -1,9 +1,6 @@
-class_name TheWeb
+class_name BuyPage
 extends Control
 
-@onready var erock_tab = $MarginContainer/TabBar/BuyRock as Button
-@onready var rockpro_tab = $MarginContainer/TabBar/BuyMaterial as Button
-@onready var rockbook_tab = $MarginContainer/TabBar/RockBookTab as Button
 @onready var exit_button = $ExitBuy as Button
 
 func _ready():

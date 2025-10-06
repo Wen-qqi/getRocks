@@ -1,19 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://j3kx3kj0fwyb"]
+[gd_scene load_steps=7 format=3 uid="uid://mrlh20qmd7jb"]
 
-[ext_resource type="Script" uid="uid://b4oiogv82sshs" path="res://buy-menu.gd" id="1_r4bpk"]
-[ext_resource type="Texture2D" uid="uid://bqxef1y0bmhc0" path="res://art/white.jpg" id="2_u64re"]
-[ext_resource type="Texture2D" uid="uid://dpc6voomdd3i2" path="res://art/rockPixelArt.png" id="3_ixk6h"]
-[ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="3_r4bpk"]
-[ext_resource type="Texture2D" uid="uid://ccx7q0pd3x2qh" path="res://art/shoppingBasketPlaceholder.jpg" id="4_xwr7i"]
-[ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="6_syr3t"]
+[ext_resource type="Texture2D" uid="uid://bqxef1y0bmhc0" path="res://art/white.jpg" id="1_jvd3p"]
+[ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_toy25"]
+[ext_resource type="Texture2D" uid="uid://dpc6voomdd3i2" path="res://art/rockPixelArt.png" id="3_u581q"]
+[ext_resource type="Texture2D" uid="uid://ccx7q0pd3x2qh" path="res://art/shoppingBasketPlaceholder.jpg" id="4_5f1me"]
+[ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="5_d46c3"]
 
 [sub_resource type="Theme" id="Theme_cjj7f"]
-HBoxContainer/icons/test_frame = ExtResource("6_syr3t")
+HBoxContainer/icons/test_frame = ExtResource("5_d46c3")
 
-[node name="BuyMenu" type="Control"]
+[node name="BuyPage" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_r4bpk")
 
 [node name="CanvasIDK" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -35,7 +33,7 @@ metadata/_tab_index = 0
 [node name="Background" type="TextureRect" parent="CanvasIDK/TabBar/BuyRock"]
 visible = false
 layout_mode = 2
-texture = ExtResource("2_u64re")
+texture = ExtResource("1_jvd3p")
 
 [node name="RockListings" type="ScrollContainer" parent="CanvasIDK/TabBar/BuyRock"]
 layout_mode = 2
@@ -47,7 +45,7 @@ size_flags_vertical = 3
 
 [node name="ExampleListing" type="PanelContainer" parent="CanvasIDK/TabBar/BuyRock/RockListings/Listings"]
 layout_mode = 2
-theme = ExtResource("3_r4bpk")
+theme = ExtResource("2_toy25")
 
 [node name="ExampleListing" type="HBoxContainer" parent="CanvasIDK/TabBar/BuyRock/RockListings/Listings/ExampleListing"]
 custom_minimum_size = Vector2(0, 200)
@@ -55,7 +53,7 @@ layout_mode = 2
 
 [node name="ListingImage" type="TextureRect" parent="CanvasIDK/TabBar/BuyRock/RockListings/Listings/ExampleListing/ExampleListing"]
 layout_mode = 2
-texture = ExtResource("3_ixk6h")
+texture = ExtResource("3_u581q")
 expand_mode = 2
 
 [node name="ListingDesc" type="TextEdit" parent="CanvasIDK/TabBar/BuyRock/RockListings/Listings/ExampleListing/ExampleListing"]
@@ -72,7 +70,7 @@ custom_minimum_size = Vector2(200, 200)
 layout_mode = 0
 offset_right = 166.0
 offset_bottom = 167.0
-texture = ExtResource("4_xwr7i")
+texture = ExtResource("4_5f1me")
 expand_mode = 4
 
 [node name="BuyMaterial" type="Label" parent="CanvasIDK/TabBar"]
@@ -94,7 +92,7 @@ layout_mode = 2
 [node name="ListingPicture" type="TextureRect" parent="CanvasIDK/TabBar/BuyMaterial/GridContainer/Listing"]
 layout_mode = 2
 theme = SubResource("Theme_cjj7f")
-texture = ExtResource("3_ixk6h")
+texture = ExtResource("3_u581q")
 
 [node name="EditAmount" type="HBoxContainer" parent="CanvasIDK/TabBar/BuyMaterial/GridContainer/Listing"]
 layout_mode = 2

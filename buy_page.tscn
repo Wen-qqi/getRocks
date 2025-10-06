@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnapr3mqmsoh1"]
+
+[ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_2ndei"]
+[ext_resource type="Texture2D" uid="uid://dpc6voomdd3i2" path="res://art/rockPixelArt.png" id="3_rrft4"]
+[ext_resource type="Texture2D" uid="uid://ccx7q0pd3x2qh" path="res://art/shoppingBasketPlaceholder.jpg" id="4_fjea7"]
+[ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="5_11egi"]
+[ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="6_2ndei"]
+
+[sub_resource type="Theme" id="Theme_cjj7f"]
+HBoxContainer/icons/test_frame = ExtResource("5_11egi")
+
+[node name="BuyPage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="CanvasIDK" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+offset_top = 2.0
+offset_right = 1860.0
+offset_bottom = 1014.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasIDK"]
+layout_mode = 2
+theme = ExtResource("2_2ndei")
+
+[node name="TabBar" type="TabContainer" parent="CanvasIDK/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+current_tab = 0
+clip_tabs = false
+
+[node name="BuyRock" type="Label" parent="CanvasIDK/PanelContainer/TabBar"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="RockListings" type="ScrollContainer" parent="CanvasIDK/PanelContainer/TabBar/BuyRock"]
+layout_mode = 2
+offset_right = 1776.0
+offset_bottom = 847.0
+
+[node name="Listings" type="VBoxContainer" parent="CanvasIDK/PanelContainer/TabBar/BuyRock/RockListings"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ExampleListing" type="PanelContainer" parent="CanvasIDK/PanelContainer/TabBar/BuyRock/RockListings/Listings"]
+layout_mode = 2
+
+[node name="ListingItems" type="HBoxContainer" parent="CanvasIDK/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="ListingImage" type="TextureRect" parent="CanvasIDK/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing/ListingItems"]
+layout_mode = 2
+texture = ExtResource("3_rrft4")
+expand_mode = 2
+
+[node name="ListingDesc" type="TextEdit" parent="CanvasIDK/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing/ListingItems"]
+custom_minimum_size = Vector2(1300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Random Selection of Rocks"
+
+[node name="AddtoCart" type="Button" parent="CanvasIDK/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing/ListingItems"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasIDK/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing/ListingItems/AddtoCart"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 166.0
+offset_bottom = 167.0
+texture = ExtResource("4_fjea7")
+expand_mode = 4
+
+[node name="BuyMaterial" type="Label" parent="CanvasIDK/PanelContainer/TabBar"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial"]
+layout_mode = 0
+offset_right = 441.0
+offset_bottom = 302.0
+
+[node name="Listing" type="VBoxContainer" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer"]
+layout_mode = 2
+
+[node name="ListingTitle" type="TextEdit" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+layout_mode = 2
+
+[node name="ListingPicture" type="TextureRect" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+layout_mode = 2
+theme = SubResource("Theme_cjj7f")
+texture = ExtResource("3_rrft4")
+
+[node name="EditAmount" type="HBoxContainer" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+layout_mode = 2
+
+[node name="RemoveQuan" type="Button" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing/EditAmount"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing/EditAmount"]
+layout_mode = 2
+
+[node name="AddQuan" type="Button" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing/EditAmount"]
+layout_mode = 2
+
+[node name="AddToCart" type="Button" parent="CanvasIDK/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+visible = false
+layout_mode = 2
+
+[node name="RockBookTab" type="Label" parent="CanvasIDK/PanelContainer/TabBar"]
+visible = false
+layout_mode = 2
+text = "RockBook"
+metadata/_tab_index = 2
+
+[node name="TEST_BUTTON" type="Label" parent="CanvasIDK/PanelContainer/TabBar"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="ExitBuy" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1834.0
+offset_top = 4.0
+offset_right = 1914.0
+offset_bottom = 84.0
+icon = ExtResource("6_2ndei")
+icon_alignment = 1
+expand_icon = true
