@@ -1,0 +1,171 @@
+[gd_scene load_steps=11 format=3 uid="uid://b3123bmfiqxi6"]
+
+[ext_resource type="Script" uid="uid://8ql1uta5sx87" path="res://collection_page.gd" id="1_os4ut"]
+[ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="2_6n7rd"]
+[ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_thgsj"]
+[ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="3_yo600"]
+[ext_resource type="Texture2D" uid="uid://dpc1hatu76ok3" path="res://art/redGemStone.png" id="4_eppuw"]
+[ext_resource type="Texture2D" uid="uid://cyux82ft17vk8" path="res://art/yellowGemStone.png" id="5_vxqdc"]
+[ext_resource type="Texture2D" uid="uid://ctuogad2vomv" path="res://art/greenGemStone4.png" id="6_v5xh5"]
+[ext_resource type="Texture2D" uid="uid://dsjxie62nb2qb" path="res://art/blueGemStone4.png" id="7_c4c6e"]
+[ext_resource type="Texture2D" uid="uid://dgf5fj3bexf4f" path="res://art/purpleGemStone.png" id="8_rih7r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ri6"]
+texture = ExtResource("3_yo600")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[node name="CollectionPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_os4ut")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+offset_top = 4.0
+offset_bottom = 4.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_thgsj")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 8
+
+[node name="RedRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("4_eppuw")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_thgsj")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+
+[node name="YellowRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("5_vxqdc")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_thgsj")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+
+[node name="GreenRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("6_v5xh5")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_thgsj")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+
+[node name="BlueRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("7_c4c6e")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_thgsj")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+
+[node name="PurpleRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("8_rih7r")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_thgsj")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+
+[node name="ExitCollection" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1787.0
+offset_top = 24.0
+offset_right = 1894.0
+offset_bottom = 132.0
+text = "EXIT"
+icon = ExtResource("2_6n7rd")
+icon_alignment = 1
+expand_icon = true

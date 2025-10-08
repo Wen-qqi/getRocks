@@ -1,12 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpj1rghvcvmno"]
+[gd_scene load_steps=8 format=3 uid="uid://bpj1rghvcvmno"]
 
 [ext_resource type="Script" uid="uid://beg3p0xush3fu" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dehbv7vhr5cuq" path="res://art/green_wall_room.webp" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bygs7m5kpmwkv" path="res://art/storeButton.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://xnynv34btudl" path="res://art/boxinventory2-pixilart.png" id="3_h2yge"]
+[ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://cr2q31sd0qu41" path="res://art/shelves.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cr4rhuxj4nfql" path="res://art/addButton.png" id="7_5vw27"]
 
 [node name="MainPage" type="Node"]
 script = ExtResource("1_0xm2m")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TestingButton" type="Button" parent="."]
+visible = false
+offset_left = 100.0
+offset_top = 376.0
+offset_right = 128.0
+offset_bottom = 443.0
+text = "test"
+
+[node name="Shelf" type="TextureRect" parent="."]
+visible = false
+offset_left = 380.0
+offset_top = 341.0
+offset_right = 680.0
+offset_bottom = 411.0
+texture = ExtResource("5_lquwl")
+
+[node name="Wall" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,23 +36,145 @@ grow_vertical = 2
 texture = ExtResource("1_ig7tw")
 
 [node name="Menu" type="HBoxContainer" parent="."]
-offset_left = 44.0
-offset_top = 880.0
-offset_right = 350.0
-offset_bottom = 1046.0
+custom_minimum_size = Vector2(600, 100)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -199.0
+offset_right = 676.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="Buy" type="Button" parent="Menu"]
+[node name="BuyFrame" type="PanelContainer" parent="Menu"]
 layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_272bh")
+
+[node name="Buy" type="Button" parent="Menu/BuyFrame"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/BuyFrame/Buy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Menu/BuyFrame/Buy/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_1bvp3")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Menu/BuyFrame/Buy/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "BUY"
 
-[node name="Archive" type="Button" parent="Menu"]
+[node name="CollectionFrame" type="PanelContainer" parent="Menu"]
 layout_mode = 2
-text = "ARCHIVE"
+size_flags_horizontal = 3
+theme = ExtResource("4_272bh")
 
-[node name="TestingButton" type="Button" parent="Menu"]
+[node name="Collection" type="Button" parent="Menu/CollectionFrame"]
 layout_mode = 2
-text = "test"
+size_flags_horizontal = 3
 
-[node name="StoreDisplay" type="GridContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CollectionFrame/Collection"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Menu/CollectionFrame/Collection/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_h2yge")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Menu/CollectionFrame/Collection/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "COLLECTION"
+
+[node name="Shelf1" type="VBoxContainer" parent="."]
+offset_left = 395.0
+offset_top = 130.0
+offset_right = 695.0
+offset_bottom = 354.0
+
+[node name="Button" type="Button" parent="Shelf1"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Shelf1/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Shelf1"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf2" type="VBoxContainer" parent="."]
+offset_left = 1310.0
+offset_top = 241.0
+offset_right = 1610.0
+offset_bottom = 465.0
+
+[node name="Button" type="Button" parent="Shelf2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Shelf2/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Shelf2"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf3" type="VBoxContainer" parent="."]
+offset_left = 784.0
+offset_top = 491.0
+offset_right = 1084.0
+offset_bottom = 715.0
+
+[node name="Button" type="Button" parent="Shelf3"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="Shelf3/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Shelf3"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xnynv34btudl"
-path="res://.godot/imported/boxinventory2-pixilart.png-b042c1c3f8def74c169bea3c4d33becb.ctex"
+uid="uid://cr4rhuxj4nfql"
+path="res://.godot/imported/addButton.png-4340f37f34d1fd361b6242d83b9f4cd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/boxinventory2-pixilart.png"
-dest_files=["res://.godot/imported/boxinventory2-pixilart.png-b042c1c3f8def74c169bea3c4d33becb.ctex"]
+source_file="res://art/addButton.png"
+dest_files=["res://.godot/imported/addButton.png-4340f37f34d1fd361b6242d83b9f4cd9.ctex"]
 
 [params]
 

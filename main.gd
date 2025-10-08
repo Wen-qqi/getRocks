@@ -1,8 +1,8 @@
 extends Node
 
-@onready var buyButton = $Menu/Buy as Button
-@onready var archiveButton = $Menu/Archive as Button
-@onready var testButton = $Menu/TestingButton as Button
+@onready var buyButton = $Menu/BuyFrame/Buy as Button
+@onready var archiveButton = $Menu/CollectionFrame/Collection as Button
+@onready var testButton = $TestingButton as Button
 
 func _ready():
 	handle_connecting_signals()
@@ -10,8 +10,8 @@ func _ready():
 func onBuyPressed() -> void:
 	get_tree().change_scene_to_file("res://buy_page.tscn")
 	
-func onArchivePressed() -> void:
-	get_tree().change_scene_to_file("res://collection.tscn")
+func onCollectionPressed() -> void:
+	get_tree().change_scene_to_file("res://collection_page.tscn")
 	
 func onTestPressed() -> void:
 	var rand = str(randi() % 10) # gets a number from 0-9
@@ -21,6 +21,6 @@ func onTestPressed() -> void:
 	
 func handle_connecting_signals():
 	buyButton.button_down.connect(onBuyPressed)
-	archiveButton.button_down.connect(onArchivePressed)
+	archiveButton.button_down.connect(onCollectionPressed)
 	testButton.button_down.connect(onTestPressed)
 	

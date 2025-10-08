@@ -1,4 +1,3 @@
-class_name BuyPage
 extends Control
 
 @onready var exit_button = $ExitBuy as Button
