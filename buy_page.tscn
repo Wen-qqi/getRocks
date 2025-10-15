@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dnapr3mqmsoh1"]
+[gd_scene load_steps=12 format=3 uid="uid://dnapr3mqmsoh1"]
 
 [ext_resource type="Script" uid="uid://bnoriikutjlr0" path="res://buy_page.gd" id="1_fjea7"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_2ndei"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cryqnxx3maswp" path="res://art/coin.png" id="5_2ndei"]
 [ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="5_11egi"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="6_2ndei"]
+[ext_resource type="Script" uid="uid://wjf6uqop3o3o" path="res://balance.gd" id="8_11egi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjea7"]
 texture = ExtResource("2_rrft4")
@@ -24,7 +25,7 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_fjea7")
 
-[node name="BuyMenu" type="MarginContainer" parent="."]
+[node name="MarginBuy" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 2
 offset_top = 2.0
@@ -35,21 +36,21 @@ theme_override_constants/margin_top = 180
 theme_override_constants/margin_right = 150
 theme_override_constants/margin_bottom = 70
 
-[node name="PanelContainer" type="PanelContainer" parent="BuyMenu"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginBuy"]
 layout_mode = 2
 theme = ExtResource("2_2ndei")
 
-[node name="TabBar" type="TabContainer" parent="BuyMenu/PanelContainer"]
+[node name="TabContainer" type="TabContainer" parent="MarginBuy/PanelContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
 current_tab = 0
 clip_tabs = false
 
-[node name="BuyRock" type="Label" parent="BuyMenu/PanelContainer/TabBar"]
+[node name="BuyRock" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="RockListings" type="ScrollContainer" parent="BuyMenu/PanelContainer/TabBar/BuyRock"]
+[node name="RockListings" type="ScrollContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,91 +58,97 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Listings" type="VBoxContainer" parent="BuyMenu/PanelContainer/TabBar/BuyRock/RockListings"]
+[node name="Listings" type="VBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ExampleListing" type="PanelContainer" parent="BuyMenu/PanelContainer/TabBar/BuyRock/RockListings/Listings"]
+[node name="Listing1" type="PanelContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
 
-[node name="ListingItems" type="HBoxContainer" parent="BuyMenu/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1"]
 layout_mode = 2
 
-[node name="ListingImage" type="TextureRect" parent="BuyMenu/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing/ListingItems"]
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_rrft4")
 expand_mode = 2
 
-[node name="ListingDesc" type="Label" parent="BuyMenu/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing/ListingItems"]
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 90
-text = "   Random Selection of Rocks"
+text = "   Rock"
 
-[node name="AddtoCart" type="Button" parent="BuyMenu/PanelContainer/TabBar/BuyRock/RockListings/Listings/ExampleListing/ListingItems"]
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_5q6ws")
 
-[node name="BuyMaterial" type="Label" parent="BuyMenu/PanelContainer/TabBar"]
+[node name="BuyMaterial" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="GridContainer" type="GridContainer" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial"]
+[node name="GridContainer" type="GridContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial"]
 layout_mode = 0
 offset_right = 441.0
 offset_bottom = 302.0
 
-[node name="Listing" type="VBoxContainer" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer"]
+[node name="Listing" type="VBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer"]
 layout_mode = 2
 
-[node name="ListingTitle" type="TextEdit" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+[node name="ListingTitle" type="TextEdit" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
 layout_mode = 2
 
-[node name="ListingPicture" type="TextureRect" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+[node name="ListingPicture" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
 layout_mode = 2
 theme = SubResource("Theme_cjj7f")
 texture = ExtResource("3_rrft4")
 
-[node name="EditAmount" type="HBoxContainer" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+[node name="EditAmount" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
 layout_mode = 2
 
-[node name="RemoveQuan" type="Button" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing/EditAmount"]
+[node name="RemoveQuan" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing/EditAmount"]
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing/EditAmount"]
+[node name="LineEdit" type="LineEdit" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing/EditAmount"]
 layout_mode = 2
 
-[node name="AddQuan" type="Button" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing/EditAmount"]
+[node name="AddQuan" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing/EditAmount"]
 layout_mode = 2
 
-[node name="AddToCart" type="Button" parent="BuyMenu/PanelContainer/TabBar/BuyMaterial/GridContainer/Listing"]
+[node name="AddToCart" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
 visible = false
 layout_mode = 2
 
-[node name="BalanceDisplay" type="PanelContainer" parent="."]
+[node name="MarginBalance" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_right = 300.0
+offset_bottom = 180.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BalanceDisplay" type="PanelContainer" parent="MarginBalance"]
 layout_mode = 2
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 276.0
-offset_bottom = 148.0
 theme = ExtResource("2_2ndei")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BalanceDisplay"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBalance/BalanceDisplay"]
 layout_mode = 2
 theme = ExtResource("2_2ndei")
 
-[node name="CoinDisplay" type="TextureRect" parent="BalanceDisplay/HBoxContainer"]
+[node name="CoinDisplay" type="TextureRect" parent="MarginBalance/BalanceDisplay/HBoxContainer"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 texture = ExtResource("5_2ndei")
 
-[node name="Balance" type="Label" parent="BalanceDisplay/HBoxContainer"]
+[node name="Balance" type="Label" parent="MarginBalance/BalanceDisplay/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "123456"
+script = ExtResource("8_11egi")
 
 [node name="ExitBuy" type="Button" parent="."]
 layout_mode = 0

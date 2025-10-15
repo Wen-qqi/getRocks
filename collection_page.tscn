@@ -1,14 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3123bmfiqxi6"]
+[gd_scene load_steps=16 format=3 uid="uid://b3123bmfiqxi6"]
 
 [ext_resource type="Script" uid="uid://8ql1uta5sx87" path="res://collection_page.gd" id="1_os4ut"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="2_6n7rd"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_thgsj"]
 [ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="3_yo600"]
 [ext_resource type="Texture2D" uid="uid://dpc1hatu76ok3" path="res://art/redGemStone.png" id="4_eppuw"]
+[ext_resource type="Script" uid="uid://dhb2x80rkvdlf" path="res://rock_count/red_rock_count.gd" id="5_v5xh5"]
 [ext_resource type="Texture2D" uid="uid://cyux82ft17vk8" path="res://art/yellowGemStone.png" id="5_vxqdc"]
 [ext_resource type="Texture2D" uid="uid://ctuogad2vomv" path="res://art/greenGemStone4.png" id="6_v5xh5"]
 [ext_resource type="Texture2D" uid="uid://dsjxie62nb2qb" path="res://art/blueGemStone4.png" id="7_c4c6e"]
+[ext_resource type="Script" uid="uid://cni5dt6ra3nsi" path="res://rock_count/yellow_rock_count.gd" id="7_rih7r"]
 [ext_resource type="Texture2D" uid="uid://dgf5fj3bexf4f" path="res://art/purpleGemStone.png" id="8_rih7r"]
+[ext_resource type="Script" uid="uid://cdlacj3q3hqio" path="res://rock_count/green_rock_count.gd" id="9_52ri6"]
+[ext_resource type="Script" uid="uid://cjlkw4mobt0hy" path="res://rock_count/blue_rock_count.gd" id="11_v5xh5"]
+[ext_resource type="Script" uid="uid://bf7gh08du2uuq" path="res://rock_count/purple_rock_count.gd" id="13_c4c6e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ri6"]
 texture = ExtResource("3_yo600")
@@ -67,13 +72,14 @@ layout_mode = 2
 texture = ExtResource("4_eppuw")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock"]
+[node name="RedRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_thgsj")
 theme_override_font_sizes/font_size = 50
 text = "123456"
+script = ExtResource("5_v5xh5")
 
 [node name="YellowRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -88,13 +94,14 @@ layout_mode = 2
 texture = ExtResource("5_vxqdc")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock"]
+[node name="YellowRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_thgsj")
 theme_override_font_sizes/font_size = 50
 text = "123456"
+script = ExtResource("7_rih7r")
 
 [node name="GreenRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -109,13 +116,14 @@ layout_mode = 2
 texture = ExtResource("6_v5xh5")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock"]
+[node name="GreenRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_thgsj")
 theme_override_font_sizes/font_size = 50
 text = "123456"
+script = ExtResource("9_52ri6")
 
 [node name="BlueRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -130,13 +138,14 @@ layout_mode = 2
 texture = ExtResource("7_c4c6e")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock"]
+[node name="BlueRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_thgsj")
 theme_override_font_sizes/font_size = 50
 text = "123456"
+script = ExtResource("11_v5xh5")
 
 [node name="PurpleRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -151,13 +160,14 @@ layout_mode = 2
 texture = ExtResource("8_rih7r")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock"]
+[node name="PurpleRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_thgsj")
 theme_override_font_sizes/font_size = 50
 text = "123456"
+script = ExtResource("13_c4c6e")
 
 [node name="ExitCollection" type="Button" parent="."]
 layout_mode = 0
