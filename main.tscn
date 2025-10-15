@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpj1rghvcvmno"]
+[gd_scene load_steps=11 format=3 uid="uid://bpj1rghvcvmno"]
 
 [ext_resource type="Script" uid="uid://beg3p0xush3fu" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bygs7m5kpmwkv" path="res://art/storeButton.png" id="3_1bvp3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cr2q31sd0qu41" path="res://art/shelves.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://bi0locg68a76x" path="res://art/plusButton.png" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cbvotcfoqns2b" path="res://art/mainMenuButton.png" id="8_kek77"]
+[ext_resource type="Texture2D" uid="uid://cryqnxx3maswp" path="res://art/coin.png" id="9_4c57u"]
 [ext_resource type="Script" uid="uid://wjf6uqop3o3o" path="res://global/balance.gd" id="9_kek77"]
 
 [node name="MainPage" type="Node"]
@@ -183,15 +184,37 @@ layout_mode = 2
 texture = ExtResource("5_lquwl")
 
 [node name="OpenExitMenu" type="Button" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -58.0
-offset_bottom = 58.0
-grow_horizontal = 0
+offset_left = 1787.0
+offset_top = 24.0
+offset_right = 1894.0
+offset_bottom = 132.0
 icon = ExtResource("8_kek77")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Balance" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 16.0
+[node name="MarginBalance" type="MarginContainer" parent="."]
+offset_right = 300.0
+offset_bottom = 180.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BalanceDisplay" type="PanelContainer" parent="MarginBalance"]
+layout_mode = 2
+theme = ExtResource("4_272bh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBalance/BalanceDisplay"]
+layout_mode = 2
+theme = ExtResource("4_272bh")
+
+[node name="CoinDisplay" type="TextureRect" parent="MarginBalance/BalanceDisplay/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+texture = ExtResource("9_4c57u")
+
+[node name="Balance" type="Label" parent="MarginBalance/BalanceDisplay/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "123456"
 script = ExtResource("9_kek77")

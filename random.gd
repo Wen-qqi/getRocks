@@ -8,8 +8,8 @@ var rarities = {"Red" : 10,
 
 var rng = RandomNumberGenerator.new()
 
-func _ready():
-	print(get_rarity())
+#func _ready():
+#	print(get_rarity())
 
 func get_rarity():
 	rng.randomize()
