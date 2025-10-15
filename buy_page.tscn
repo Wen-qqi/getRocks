@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cryqnxx3maswp" path="res://art/coin.png" id="5_2ndei"]
 [ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="5_11egi"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="6_2ndei"]
-[ext_resource type="Script" uid="uid://wjf6uqop3o3o" path="res://balance.gd" id="8_11egi"]
+[ext_resource type="Script" uid="uid://wjf6uqop3o3o" path="res://global/balance.gd" id="8_11egi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjea7"]
 texture = ExtResource("2_rrft4")
