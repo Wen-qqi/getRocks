@@ -218,3 +218,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "123456"
 script = ExtResource("9_kek77")
+
+[connection signal="pressed" from="Shelf1/Button" to="." method="_on_shelfbutton1_pressed"]
