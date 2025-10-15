@@ -22,3 +22,6 @@ func handle_connecting_signals():
 	collectionButton.button_down.connect(onCollectionPressed)
 	testButton.button_down.connect(onTestPressed)
 	
+
+func _on_shelfbutton1_pressed() -> void:
+	pass # Replace with function body.
