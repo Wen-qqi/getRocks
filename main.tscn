@@ -184,10 +184,10 @@ layout_mode = 2
 texture = ExtResource("5_lquwl")
 
 [node name="OpenExitMenu" type="Button" parent="."]
-offset_left = 1787.0
-offset_top = 24.0
-offset_right = 1894.0
-offset_bottom = 132.0
+offset_left = 1793.0
+offset_top = 20.0
+offset_right = 1900.0
+offset_bottom = 128.0
 icon = ExtResource("8_kek77")
 icon_alignment = 1
 expand_icon = true
@@ -201,6 +201,7 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="BalanceDisplay" type="PanelContainer" parent="MarginBalance"]
+custom_minimum_size = Vector2(260, 140)
 layout_mode = 2
 theme = ExtResource("4_272bh")
 

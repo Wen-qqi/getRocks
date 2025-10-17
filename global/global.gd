@@ -2,8 +2,8 @@ extends Node
 
 var balance = 10
 
-var redRock = 0
-var yellowRock = 0
-var greenRock = 0
-var blueRock = 0
-var purpleRock = 0
+var redRock = {"count": 0, "rarity": "common"}
+var yellowRock = {"count": 0, "rarity": "common"}
+var greenRock = {"count": 0, "rarity": "common"}
+var blueRock = {"count": 0, "rarity": "common"}
+var purpleRock = {"count": 0, "rarity": "common"}

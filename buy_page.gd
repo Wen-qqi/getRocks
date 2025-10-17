@@ -18,14 +18,14 @@ func on_common_pressed() -> void:
 		var count = 5
 		while count > 0:
 			count -= 1
-			var rock = Random.get_rarity()
+			var rock = Random.get_common()
 			if rock == "Red":
-				Global.redRock += 1
+				Global.redRock["count"] += 1
 			elif rock == "Yellow":
-				Global.yellowRock += 1
+				Global.yellowRock["count"] += 1
 			elif rock == "Green":
-				Global.greenRock += 1
+				Global.greenRock["count"] += 1
 			elif rock == "Blue":
-				Global.blueRock += 1
+				Global.blueRock["count"] += 1
 			elif rock == "Purple":
-				Global.purpleRock += 1
+				Global.purpleRock["count"] += 1
