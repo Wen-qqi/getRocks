@@ -1,0 +1,254 @@
+[gd_scene load_steps=16 format=3 uid="uid://dgc3w4naidone"]
+
+[ext_resource type="Script" uid="uid://0yaa0t2icjlo" path="res://display_page.gd" id="1_wedtt"]
+[ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_5e1ec"]
+[ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="3_71lm7"]
+[ext_resource type="Texture2D" uid="uid://dpc1hatu76ok3" path="res://art/redGemStone.png" id="4_o418p"]
+[ext_resource type="Script" uid="uid://dhb2x80rkvdlf" path="res://global/red_rock_count.gd" id="5_4kw6a"]
+[ext_resource type="Texture2D" uid="uid://cyux82ft17vk8" path="res://art/yellowGemStone.png" id="6_bpcqb"]
+[ext_resource type="Script" uid="uid://cni5dt6ra3nsi" path="res://global/yellow_rock_count.gd" id="7_xmkbh"]
+[ext_resource type="Texture2D" uid="uid://ctuogad2vomv" path="res://art/greenGemStone4.png" id="8_p3ubq"]
+[ext_resource type="Script" uid="uid://cdlacj3q3hqio" path="res://global/green_rock_count.gd" id="9_4cl6i"]
+[ext_resource type="Texture2D" uid="uid://dsjxie62nb2qb" path="res://art/blueGemStone4.png" id="10_wvknr"]
+[ext_resource type="Script" uid="uid://cjlkw4mobt0hy" path="res://global/blue_rock_count.gd" id="11_5dyt7"]
+[ext_resource type="Texture2D" uid="uid://dgf5fj3bexf4f" path="res://art/purpleGemStone.png" id="12_kyt17"]
+[ext_resource type="Script" uid="uid://bf7gh08du2uuq" path="res://global/purple_rock_count.gd" id="13_fhs30"]
+[ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="14_0g0ms"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ri6"]
+texture = ExtResource("3_71lm7")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[node name="DisplayPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wedtt")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+offset_top = 4.0
+offset_bottom = 4.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_5e1ec")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 8
+
+[node name="RedRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock"]
+custom_minimum_size = Vector2(160, 180)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 170.0
+offset_bottom = 182.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("4_o418p")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button"]
+layout_mode = 0
+offset_top = 173.0
+offset_right = 161.0
+offset_bottom = 224.0
+
+[node name="RedRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_5e1ec")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+script = ExtResource("5_4kw6a")
+
+[node name="YellowRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock"]
+custom_minimum_size = Vector2(160, 180)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 170.0
+offset_bottom = 182.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("6_bpcqb")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button"]
+layout_mode = 0
+offset_top = 177.0
+offset_right = 164.0
+offset_bottom = 228.0
+
+[node name="YellowRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_5e1ec")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+script = ExtResource("7_xmkbh")
+
+[node name="GreenRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock"]
+custom_minimum_size = Vector2(160, 180)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 170.0
+offset_bottom = 182.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("8_p3ubq")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button"]
+layout_mode = 0
+offset_top = 177.0
+offset_right = 161.0
+offset_bottom = 228.0
+
+[node name="GreenRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_5e1ec")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+script = ExtResource("9_4cl6i")
+
+[node name="BlueRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock"]
+custom_minimum_size = Vector2(160, 180)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 170.0
+offset_bottom = 182.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("10_wvknr")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button"]
+layout_mode = 0
+offset_top = 176.0
+offset_right = 171.0
+offset_bottom = 227.0
+
+[node name="BlueRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_5e1ec")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+script = ExtResource("11_5dyt7")
+
+[node name="PurpleRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock"]
+custom_minimum_size = Vector2(160, 180)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 170.0
+offset_bottom = 182.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("12_kyt17")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PurpleRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.261
+offset_left = 28.0
+offset_top = 176.0
+offset_right = -19.0
+offset_bottom = 0.019989
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_5e1ec")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+horizontal_alignment = 2
+vertical_alignment = 2
+script = ExtResource("13_fhs30")
+
+[node name="ExitCollection" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1787.0
+offset_top = 24.0
+offset_right = 1894.0
+offset_bottom = 132.0
+text = "EXIT"
+icon = ExtResource("14_0g0ms")
+icon_alignment = 1
+expand_icon = true
