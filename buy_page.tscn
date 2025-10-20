@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://dnapr3mqmsoh1"]
+[gd_scene load_steps=14 format=3 uid="uid://dnapr3mqmsoh1"]
 
 [ext_resource type="Script" uid="uid://bnoriikutjlr0" path="res://buy_page.gd" id="1_fjea7"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_2ndei"]
 [ext_resource type="Texture2D" uid="uid://b2maoti3xpcw8" path="res://art/frame2.png" id="2_rrft4"]
 [ext_resource type="Texture2D" uid="uid://dig0d51yw62s0" path="res://art/shoppingCart.png" id="3_5q6ws"]
 [ext_resource type="Texture2D" uid="uid://dpc6voomdd3i2" path="res://art/rockPixelArt.png" id="3_rrft4"]
+[ext_resource type="Texture2D" uid="uid://dpc1hatu76ok3" path="res://art/redGemStone.png" id="4_xhjy4"]
 [ext_resource type="Texture2D" uid="uid://cryqnxx3maswp" path="res://art/coin.png" id="5_2ndei"]
 [ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="5_11egi"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="6_2ndei"]
+[ext_resource type="Texture2D" uid="uid://dga6mhmqroxe4" path="res://art/colorfulGemStone1.png" id="6_30ea1"]
 [ext_resource type="Script" uid="uid://wjf6uqop3o3o" path="res://global/balance.gd" id="8_11egi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjea7"]
@@ -46,11 +48,11 @@ theme_override_font_sizes/font_size = 80
 current_tab = 0
 clip_tabs = false
 
-[node name="BuyRock" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
+[node name="Rocks" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="RockListings" type="ScrollContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock"]
+[node name="RockListings" type="ScrollContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,39 +60,70 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Listings" type="VBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings"]
+[node name="Listings" type="VBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Listing1" type="PanelContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings"]
+[node name="Listing1" type="PanelContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings"]
 layout_mode = 2
+tooltip_text = "5x Rocks (10)
+Common: 100%
+"
+theme = ExtResource("2_2ndei")
 theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1"]
 layout_mode = 2
 
-[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1/HBoxContainer"]
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_rrft4")
+texture = ExtResource("4_xhjy4")
 expand_mode = 2
 
-[node name="Description" type="Label" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1/HBoxContainer"]
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 90
-text = "   x5 Common Rock (Random)"
+text = "   Tier I"
 
-[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyRock/RockListings/Listings/Listing1/HBoxContainer"]
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_5q6ws")
 
-[node name="BuyMaterial" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
+[node name="Listing2" type="PanelContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings"]
+layout_mode = 2
+tooltip_text = "5x Rocks (25)
+Common: 80%
+Rare: 20%
+"
+theme = ExtResource("2_2ndei")
+theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2"]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_30ea1")
+expand_mode = 2
+
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 90
+text = "   Tier II"
+
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_5q6ws")
+
+[node name="Materials" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Label" type="Label" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial"]
+[node name="Label" type="Label" parent="MarginBuy/PanelContainer/TabContainer/Materials"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,36 +135,36 @@ text = "UNDER CONSTRUCTION"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial"]
+[node name="GridContainer" type="GridContainer" parent="MarginBuy/PanelContainer/TabContainer/Materials"]
 visible = false
 layout_mode = 0
 offset_right = 441.0
 offset_bottom = 302.0
 
-[node name="Listing" type="VBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer"]
+[node name="Listing" type="VBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer"]
 layout_mode = 2
 
-[node name="ListingTitle" type="TextEdit" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
+[node name="ListingTitle" type="TextEdit" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer/Listing"]
 layout_mode = 2
 
-[node name="ListingPicture" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
+[node name="ListingPicture" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer/Listing"]
 layout_mode = 2
 theme = SubResource("Theme_cjj7f")
 texture = ExtResource("3_rrft4")
 
-[node name="EditAmount" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
+[node name="EditAmount" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer/Listing"]
 layout_mode = 2
 
-[node name="RemoveQuan" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing/EditAmount"]
+[node name="RemoveQuan" type="Button" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer/Listing/EditAmount"]
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing/EditAmount"]
+[node name="LineEdit" type="LineEdit" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer/Listing/EditAmount"]
 layout_mode = 2
 
-[node name="AddQuan" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing/EditAmount"]
+[node name="AddQuan" type="Button" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer/Listing/EditAmount"]
 layout_mode = 2
 
-[node name="AddToCart" type="Button" parent="MarginBuy/PanelContainer/TabContainer/BuyMaterial/GridContainer/Listing"]
+[node name="AddToCart" type="Button" parent="MarginBuy/PanelContainer/TabContainer/Materials/GridContainer/Listing"]
 visible = false
 layout_mode = 2
 

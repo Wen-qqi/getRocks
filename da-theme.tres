@@ -13,4 +13,5 @@ texture_margin_bottom = 35.0
 [resource]
 default_font = ExtResource("2_ypd2g")
 Button/icons/icon = null
+Label/font_sizes/font_size = 50
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_ypd2g")

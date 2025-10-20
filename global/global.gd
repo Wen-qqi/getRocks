@@ -1,12 +1,14 @@
 extends Node
 
-var balance = 10
+var balance = 100
 
-var redRock = {"count": 0, "rarity": "common"}
-var yellowRock = {"count": 0, "rarity": "common"}
-var greenRock = {"count": 0, "rarity": "common"}
-var blueRock = {"count": 0, "rarity": "common"}
-var purpleRock = {"count": 0, "rarity": "common"}
+var red = {"count": 0, "rarity": "common"}
+var yellow = {"count": 0, "rarity": "common"}
+var green = {"count": 0, "rarity": "common"}
+var blue = {"count": 0, "rarity": "common"}
+var purple = {"count": 0, "rarity": "common"}
+var sunset = {"count": 0, "rarity": "rare"}
+var sherbet = {"count": 0, "rarity": "rare"}
 
 var selected_rock : Texture = null
 var selected_path : NodePath = NodePath("")
