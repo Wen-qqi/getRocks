@@ -12,3 +12,8 @@ var sherbet = {"count": 0, "rarity": "rare"}
 
 var selected_rock : Texture = null
 var selected_path : NodePath = NodePath("")
+var shelf_rocks := {"shelf1": null,
+					"shelf2": null,
+					"shelf3": null}
+
+var current_shelf = ""

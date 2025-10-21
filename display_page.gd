@@ -10,7 +10,7 @@ const purple_rock = preload("res://art/purpleGemStone.png")
 const red_rock = preload("res://art/redGemStone.png")
 const yellow_rock = preload("res://art/yellowGemStone.png")
 const green_rock = preload("res://art/GreenGemStone.png")
-const blue_rock = preload("res://art/blueGemStone.png")
+const blue_rock = preload("res://art/blueGemStone4.png")
 
 func _ready():
 	exit_button.button_down.connect(on_exit_pressed)
@@ -27,21 +27,27 @@ func on_exit_pressed() -> void:
 	set_process(false)
 
 func _on_purpleRock_pressed() -> void:
-	Global.selected_rock = purple_rock
-	get_tree().change_scene_to_file("res://main.tscn")
+	assign_rock(purple_rock)
+	#get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_redRock_button_down() -> void:
-	Global.selected_rock = red_rock
-	get_tree().change_scene_to_file("res://main.tscn")
+	assign_rock(red_rock)
+	#get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_yellowRock_button_pressed() -> void:
-	Global.selected_rock = yellow_rock
-	get_tree().change_scene_to_file("res://main.tscn")
+	assign_rock(yellow_rock)
+	#get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_greenRock_button_pressed() -> void:
-	Global.selected_rock = green_rock
-	get_tree().change_scene_to_file("res://main.tscn")
+	assign_rock(green_rock)
+	#get_tree().change_scene_to_file("res://main.tscn")
 	
 func _on_blueRock_button_pressed() -> void:
-	Global.selected_rock = blue_rock
+	assign_rock(blue_rock)
+	#get_tree().change_scene_to_file("res://main.tscn")
+
+func assign_rock(rock_texture: Texture) -> void:
+	if Global.current_shelf != "":
+		Global.shelf_rocks[Global.current_shelf] = rock_texture
 	get_tree().change_scene_to_file("res://main.tscn")
+	

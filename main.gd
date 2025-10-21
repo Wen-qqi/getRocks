@@ -11,15 +11,7 @@ extends Node
 
 func _ready():
 	handle_connecting_signals()
-	if Global.selected_rock != null and Global.selected_path != NodePath(""):
-		var node_to_update = get_node(Global.selected_path)
-		if node_to_update and node_to_update is TextureRect:
-			node_to_update.texture = Global.selected_rock
-		else:
-			print("Warning: selected_path does not point to a TextureRect!")
-
-		Global.selected_rock = null
-		Global.selected_path = NodePath("")
+	update_shelf()
 	
 func onExitMenuPressed() -> void:
 	get_tree().change_scene_to_file("res://exit_menu.tscn")
@@ -35,11 +27,11 @@ func onTestPressed() -> void:
 	testButton.set_text(rand)
 
 func _on_shelfbutton1_pressed() -> void:
-	Global.selected_path = $Shelf1/Button/TextureRect.get_path()
+	Global.current_shelf = "shelf1"
 	get_tree().change_scene_to_file("res://display_page.tscn")
 
 func shelfbutton2Pressed() -> void:
-	Global.selected_path = $Shelf2/Button/TextureRect.get_path()
+	Global.current_shelf = "shelf2"
 	get_tree().change_scene_to_file("res://display_page.tscn")
 	
 
@@ -49,7 +41,19 @@ func handle_connecting_signals():
 	collectionButton.button_down.connect(onCollectionPressed)
 	testButton.button_down.connect(onTestPressed)
 	#shelf1.pressed.connect(_on_shelfbutton1_pressed)
+	#shelf2.pressed.connect(shelfbutton2Pressed)
+	#shelf3.pressed.connect(_on_shelfButton3_pressed)
 	
 func _on_shelfButton3_pressed() -> void:
-	Global.selected_path = $Shelf3/Button/TextureRect.get_path()
+	Global.current_shelf = "shelf3"
 	get_tree().change_scene_to_file("res://display_page.tscn")
+	
+func update_shelf():
+	for i in range(1, 4):
+		var shelf_name = "shelf%d" % i
+		if Global.shelf_rocks.has(shelf_name) and Global.shelf_rocks[shelf_name] != null:
+			var texture = Global.shelf_rocks[shelf_name]
+			var texture_rect_path = "Shelf%d/Button/TextureRect" % i
+			var texture_rect = get_node(texture_rect_path)
+			if texture_rect and texture_rect is TextureRect:
+				texture_rect.texture = texture
