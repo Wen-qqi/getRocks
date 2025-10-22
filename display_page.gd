@@ -7,7 +7,6 @@ extends Control
 @onready var yellowRock_button = $MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button as Button
 @onready var greenRock_button = $MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button as Button
 const purple_rock = preload("res://art/purpleGemStone.png")
-const red_rock = preload("res://art/redGemStone.png")
 const yellow_rock = preload("res://art/yellowGemStone.png")
 const green_rock = preload("res://art/GreenGemStone.png")
 const blue_rock = preload("res://art/blueGemStone4.png")
@@ -31,7 +30,9 @@ func _on_purpleRock_pressed() -> void:
 	#get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_redRock_button_down() -> void:
-	assign_rock(red_rock)
+	if Global.red["count"] > 0:
+		Global.red["count"] -= 1
+		assign_rock(load(Global.red["image"]))
 	#get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_yellowRock_button_pressed() -> void:

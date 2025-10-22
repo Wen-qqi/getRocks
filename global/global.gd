@@ -2,7 +2,7 @@ extends Node
 
 var balance = 100
 
-var red = {"count": 0, "rarity": "common"}
+var red = {"count": 0, "rarity": "common", "image": "res://art/redGemStone.png"}
 var yellow = {"count": 0, "rarity": "common"}
 var green = {"count": 0, "rarity": "common"}
 var blue = {"count": 0, "rarity": "common"}

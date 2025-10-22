@@ -64,14 +64,14 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock"]
-custom_minimum_size = Vector2(160, 180)
+custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
 [node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button"]
-layout_mode = 2
-offset_top = 12.0
+layout_mode = 0
 offset_right = 170.0
-offset_bottom = 182.0
+offset_bottom = 170.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button/ItemFrame"]
@@ -80,33 +80,28 @@ layout_mode = 2
 texture = ExtResource("4_o418p")
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button"]
-layout_mode = 0
-offset_top = 173.0
-offset_right = 161.0
-offset_bottom = 224.0
-
-[node name="RedRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button/HBoxContainer"]
+[node name="RedRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_5e1ec")
 theme_override_font_sizes/font_size = 50
 text = "123456"
+horizontal_alignment = 1
 script = ExtResource("5_4kw6a")
 
 [node name="YellowRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock"]
-custom_minimum_size = Vector2(160, 180)
+custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
 [node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button"]
-layout_mode = 2
-offset_top = 12.0
+layout_mode = 0
 offset_right = 170.0
-offset_bottom = 182.0
+offset_bottom = 170.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button/ItemFrame"]
@@ -115,33 +110,28 @@ layout_mode = 2
 texture = ExtResource("6_bpcqb")
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button"]
-layout_mode = 0
-offset_top = 177.0
-offset_right = 164.0
-offset_bottom = 228.0
-
-[node name="YellowRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button/HBoxContainer"]
+[node name="YellowRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_5e1ec")
 theme_override_font_sizes/font_size = 50
 text = "123456"
+horizontal_alignment = 1
 script = ExtResource("7_xmkbh")
 
 [node name="GreenRock" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock"]
-custom_minimum_size = Vector2(160, 180)
+custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
 [node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button"]
-layout_mode = 2
-offset_top = 12.0
+layout_mode = 0
 offset_right = 170.0
-offset_bottom = 182.0
+offset_bottom = 170.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button/ItemFrame"]
@@ -150,13 +140,7 @@ layout_mode = 2
 texture = ExtResource("8_p3ubq")
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button"]
-layout_mode = 0
-offset_top = 177.0
-offset_right = 161.0
-offset_bottom = 228.0
-
-[node name="GreenRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button/HBoxContainer"]
+[node name="GreenRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -169,14 +153,14 @@ script = ExtResource("9_4cl6i")
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock"]
-custom_minimum_size = Vector2(160, 180)
+custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
 [node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button"]
-layout_mode = 2
-offset_top = 12.0
+layout_mode = 0
 offset_right = 170.0
-offset_bottom = 182.0
+offset_bottom = 170.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button/ItemFrame"]
@@ -185,13 +169,7 @@ layout_mode = 2
 texture = ExtResource("10_wvknr")
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button"]
-layout_mode = 0
-offset_top = 176.0
-offset_right = 171.0
-offset_bottom = 227.0
-
-[node name="BlueRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button/HBoxContainer"]
+[node name="BlueRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -204,14 +182,14 @@ script = ExtResource("11_5dyt7")
 layout_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock"]
-custom_minimum_size = Vector2(160, 180)
+custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
 [node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button"]
-layout_mode = 2
-offset_top = 12.0
+layout_mode = 0
 offset_right = 170.0
-offset_bottom = 182.0
+offset_bottom = 170.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button/ItemFrame"]
@@ -220,19 +198,8 @@ layout_mode = 2
 texture = ExtResource("12_kyt17")
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PurpleRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button"]
+[node name="PurpleRockCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock"]
 layout_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.261
-offset_left = 28.0
-offset_top = 176.0
-offset_right = -19.0
-offset_bottom = 0.019989
 size_flags_horizontal = 4
 size_flags_vertical = 1
 theme = ExtResource("2_5e1ec")
