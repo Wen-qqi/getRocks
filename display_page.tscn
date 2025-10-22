@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dgc3w4naidone"]
+[gd_scene load_steps=20 format=3 uid="uid://dgc3w4naidone"]
 
 [ext_resource type="Script" uid="uid://0yaa0t2icjlo" path="res://display_page.gd" id="1_wedtt"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_5e1ec"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dgf5fj3bexf4f" path="res://art/purpleGemStone.png" id="12_kyt17"]
 [ext_resource type="Script" uid="uid://bf7gh08du2uuq" path="res://collection-counts/purple_count.gd" id="13_fhs30"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="14_0g0ms"]
+[ext_resource type="Texture2D" uid="uid://dga6mhmqroxe4" path="res://art/colorfulGemStone1.png" id="14_4kw6a"]
+[ext_resource type="Script" uid="uid://cmkvv2uur3bdi" path="res://collection-counts/sunset_count.gd" id="15_bpcqb"]
+[ext_resource type="Texture2D" uid="uid://oit3lx0cjymw" path="res://art/purpleGemStone4.png" id="16_xmkbh"]
+[ext_resource type="Script" uid="uid://b5fxxx0yxj1a2" path="res://collection-counts/sherbet_count.gd" id="17_p3ubq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ri6"]
 texture = ExtResource("3_71lm7")
@@ -209,6 +213,68 @@ horizontal_alignment = 2
 vertical_alignment = 2
 script = ExtResource("13_fhs30")
 
+[node name="Sunset" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset"]
+custom_minimum_size = Vector2(170, 170)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset/Button"]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 170.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset/Button/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("14_4kw6a")
+stretch_mode = 5
+
+[node name="SunsetCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_5e1ec")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+horizontal_alignment = 2
+vertical_alignment = 2
+script = ExtResource("15_bpcqb")
+
+[node name="Sherbet" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet"]
+custom_minimum_size = Vector2(170, 170)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet/Button"]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 170.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet/Button/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("16_xmkbh")
+stretch_mode = 5
+
+[node name="SherbetCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_5e1ec")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+horizontal_alignment = 2
+vertical_alignment = 2
+script = ExtResource("17_p3ubq")
+
 [node name="ExitCollection" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1787.0
@@ -219,3 +285,11 @@ text = "EXIT"
 icon = ExtResource("14_0g0ms")
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button" to="." method="_on_redButton_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button" to="." method="_on_yellowButton_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button" to="." method="_on_greenButton_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button" to="." method="_on_blueButton_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button" to="." method="_on_purpleButton_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset/Button" to="." method="_on_sunsetButton_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet/Button" to="." method="_on_sherbetButton_pressed"]

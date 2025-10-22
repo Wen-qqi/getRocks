@@ -3,12 +3,12 @@ extends Node
 var balance = 100
 
 var red = {"count": 0, "rarity": "common", "image": "res://art/redGemStone.png"}
-var yellow = {"count": 0, "rarity": "common"}
-var green = {"count": 0, "rarity": "common"}
-var blue = {"count": 0, "rarity": "common"}
-var purple = {"count": 0, "rarity": "common"}
-var sunset = {"count": 0, "rarity": "rare"}
-var sherbet = {"count": 0, "rarity": "rare"}
+var yellow = {"count": 0, "rarity": "common", "image": "res://art/yellowGemStone.png"}
+var green = {"count": 0, "rarity": "common", "image": "res://art/GreenGemStone.png"}
+var blue = {"count": 0, "rarity": "common", "image": "res://art/blueGemStone4.png"}
+var purple = {"count": 0, "rarity": "common", "image": "res://art/purpleGemStone.png"}
+var sunset = {"count": 0, "rarity": "rare", "image": "res://art/colorfulGemStone1.png"}
+var sherbet = {"count": 0, "rarity": "rare", "image": "res://art/purpleGemStone4.png"}
 
 var selected_rock : Texture = null
 var selected_path : NodePath = NodePath("")
