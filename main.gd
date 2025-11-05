@@ -4,11 +4,6 @@ extends Node
 @onready var buyButton = $Menu/BuyFrame/Buy as Button
 @onready var collectionButton = $Menu/CollectionFrame/Collection as Button
 @onready var testButton = $TestingButton as Button
-@onready var shelf1 = $Shelf1/Button
-@onready var shelf2 = $Shelf2/Button
-@onready var shelf3 = $Shelf3/Button
-
-
 
 func _ready():
 	handle_connecting_signals()
@@ -27,10 +22,11 @@ func onCollectionPressed() -> void:
 func onTestPressed() -> void:
 	var rand = str(randi() % 10) # gets a number from 0-9
 	testButton.set_text(rand)
+	
 
-func _on_shelfbutton1_pressed() -> void:
+
+func on_shelf1_button_pressed() -> void:
 	handle_shelf_pressed("shelf1")
-
 
 func shelfbutton2Pressed() -> void:
 	handle_shelf_pressed("shelf2")
@@ -46,9 +42,9 @@ func _on_shelfButton3_pressed() -> void:
 	
 func update_shelf():
 	# For number 1-3 (shelf1 - shelf3)
-	for i in range(1, 4):
+	for i in range(1, 11):
 		var shelf_name = "shelf%d" % i # Gets the last number of shelf
-		var texture_rect_path = "Shelf%d/Button/TextureRect" % i # Makes a path to the texture depending on the shelf number
+		var texture_rect_path = "MarginContainer/GridContainer/Shelf%d/Button/TextureRect" % i # Makes a path to the texture depending on the shelf number
 		var texture_rect = get_node(texture_rect_path) # # Get the node to the texture path
 		
 		# Checks if the shelf_name is in shelf_rocks
@@ -77,7 +73,7 @@ func collect_coins(shelf_name: String) -> void:
 
 	# Update the TextureRect right away
 	var shelf_number = int(shelf_name.substr(5)) # Gets the last number of shelf
-	var texture_rect_path = "Shelf%d/Button/TextureRect" % shelf_number # Makes a path to the texture depending on the shelf number
+	var texture_rect_path = "MarginContainer/GridContainer/Shelf%d/Button/TextureRect" % shelf_number # Makes a path to the texture depending on the shelf number
 	var texture_rect = get_node(texture_rect_path) # Find the node to the texture path
 	if texture_rect and texture_rect is TextureRect: # Checks if the node exists and if the node is actually a TextureRect
 		texture_rect.texture = plus_texture # Changes the texture to plus_texture 
@@ -105,8 +101,30 @@ func handle_shelf_pressed(shelf_name: String) -> void:
 		
 func shelf_sold_update(shelf_name: String):
 	var shelf_number = int(shelf_name.substr(5)) # Gets the last number of shelf
-	var texture_rect_path = "Shelf%d/Button/TextureRect" % shelf_number # Makes a path to the texture depending on the shelf number
+	var texture_rect_path = "MarginContainer/GridContainer/Shelf%d/Button/TextureRect" % shelf_number # Makes a path to the texture depending on the shelf number
 	var texture_rect = get_node(texture_rect_path) #  Find the node to the texture path
 
 	if texture_rect and texture_rect is TextureRect: # Checks if the node exists and if the node is actually a TextureRect
 		texture_rect.texture = Global.shelf_rocks[shelf_name]["texture"] # Changes the texture to whatever the texture is set to in Global.shelf_rocks
+		
+
+func on_shelf4_button_pressed() -> void:
+	handle_shelf_pressed("shelf4")
+	
+func _on_shelf5_button_pressed() -> void:
+	handle_shelf_pressed("shelf5")
+
+func _on_shelf6_button_pressed() -> void:
+	handle_shelf_pressed("shelf6")
+
+func _on_shelf7_button_pressed() -> void:
+	handle_shelf_pressed("shelf7")
+
+func _on_shelf8_button_pressed() -> void:
+	handle_shelf_pressed("shelf8")
+
+func _on_shelf9_button_pressed() -> void:
+	handle_shelf_pressed("shelf9")
+
+func _on_shelf10_button_pressed() -> void:
+	handle_shelf_pressed("shelf10")

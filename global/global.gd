@@ -17,7 +17,14 @@ var selected_rock : Texture = null
 var selected_path : NodePath = NodePath("")
 var shelf_rocks := {"shelf1": null,
 					"shelf2": null,
-					"shelf3": null}
+					"shelf3": null,
+					"shelf4": null,
+					"shelf5": null,
+					"shelf6": null,
+					"shelf7": null,
+					"shelf8": null,
+					"shelf9": null,
+					"shelf10": null,}
 
 var current_shelf = ""
 

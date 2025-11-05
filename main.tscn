@@ -108,81 +108,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "COLLECTION"
 
-[node name="Shelf1" type="VBoxContainer" parent="."]
-offset_left = 395.0
-offset_top = 130.0
-offset_right = 695.0
-offset_bottom = 354.0
-
-[node name="Button" type="Button" parent="Shelf1"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="TextureRect" type="TextureRect" parent="Shelf1/Button"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 69.1554
-grow_horizontal = 2
-texture = ExtResource("7_5vw27")
-expand_mode = 5
-
-[node name="TextureRect" type="TextureRect" parent="Shelf1"]
-custom_minimum_size = Vector2(300, 70)
-layout_mode = 2
-texture = ExtResource("5_lquwl")
-
-[node name="Shelf2" type="VBoxContainer" parent="."]
-offset_left = 1310.0
-offset_top = 241.0
-offset_right = 1610.0
-offset_bottom = 465.0
-
-[node name="Button" type="Button" parent="Shelf2"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="TextureRect" type="TextureRect" parent="Shelf2/Button"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 69.1554
-grow_horizontal = 2
-texture = ExtResource("7_5vw27")
-expand_mode = 5
-
-[node name="TextureRect" type="TextureRect" parent="Shelf2"]
-custom_minimum_size = Vector2(300, 70)
-layout_mode = 2
-texture = ExtResource("5_lquwl")
-
-[node name="Shelf3" type="VBoxContainer" parent="."]
-offset_left = 784.0
-offset_top = 491.0
-offset_right = 1084.0
-offset_bottom = 715.0
-
-[node name="Button" type="Button" parent="Shelf3"]
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="TextureRect" type="TextureRect" parent="Shelf3/Button"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 69.1554
-grow_horizontal = 2
-texture = ExtResource("7_5vw27")
-expand_mode = 5
-
-[node name="TextureRect" type="TextureRect" parent="Shelf3"]
-custom_minimum_size = Vector2(300, 70)
-layout_mode = 2
-texture = ExtResource("5_lquwl")
-
 [node name="OpenExitMenu" type="Button" parent="."]
 offset_left = 1793.0
 offset_top = 20.0
@@ -220,6 +145,245 @@ theme_override_font_sizes/font_size = 60
 text = "123456"
 script = ExtResource("9_kek77")
 
-[connection signal="pressed" from="Shelf1/Button" to="." method="_on_shelfbutton1_pressed"]
-[connection signal="pressed" from="Shelf2/Button" to="." method="shelfbutton2Pressed"]
-[connection signal="pressed" from="Shelf3/Button" to="." method="_on_shelfButton3_pressed"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 10.0
+offset_top = 248.0
+offset_right = 1910.0
+offset_bottom = 859.0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 5
+
+[node name="Shelf1" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf1"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf1/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf1"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf2" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf2/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf2"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf3" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf3"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf3/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf3"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf4" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf4"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf4/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf4"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf5" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf5"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf5/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf5"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf6" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf6"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf6/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf6"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf7" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf7"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf7/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf7"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf8" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf8"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf8/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf8"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf9" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf9"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf9/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf9"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[node name="Shelf10" type="VBoxContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/GridContainer/Shelf10"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf10/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.1554
+grow_horizontal = 2
+texture = ExtResource("7_5vw27")
+expand_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/GridContainer/Shelf10"]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+texture = ExtResource("5_lquwl")
+
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf1/Button" to="." method="on_shelf1_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf2/Button" to="." method="shelfbutton2Pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf3/Button" to="." method="_on_shelfButton3_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf4/Button" to="." method="on_shelf4_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf5/Button" to="." method="_on_shelf5_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf6/Button" to="." method="_on_shelf6_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf7/Button" to="." method="_on_shelf7_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf8/Button" to="." method="_on_shelf8_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf9/Button" to="." method="_on_shelf9_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/Shelf10/Button" to="." method="_on_shelf10_button_pressed"]
