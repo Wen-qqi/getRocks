@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://beg3p0xush3fu" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bygs7m5kpmwkv" path="res://art/storeButton.png" id="3_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://dwdvmadlgyx53" path="res://art/sample_wall.webp" id="3_272bh"]
+[ext_resource type="Texture2D" uid="uid://bek8wgnqiex1c" path="res://art/wall_2.png" id="3_4c57u"]
 [ext_resource type="Texture2D" uid="uid://xnynv34btudl" path="res://art/boxinventory2-pixilart.png" id="3_h2yge"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://cr2q31sd0qu41" path="res://art/shelves.png" id="5_lquwl"]
@@ -36,7 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_272bh")
+texture = ExtResource("3_4c57u")
 stretch_mode = 1
 
 [node name="Menu" type="HBoxContainer" parent="."]
