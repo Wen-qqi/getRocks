@@ -11,7 +11,7 @@ var blue = {"count": 0, "rarity": "common", "image": "res://art/blueGemStone4.pn
 var purple = {"count": 0, "rarity": "common", "image": "res://art/purpleGemStone.png"}
 var sunset = {"count": 0, "rarity": "rare", "image": "res://art/colorfulGemStone1.png"}
 var sherbet = {"count": 0, "rarity": "rare", "image": "res://art/purpleGemStone4.png"}
-var coin = {"common" = 10, "rare" = 20, 'image' = "res://art/coin.png"}
+var coin = {'image' = "res://art/coin.png"}
 
 var selected_rock : Texture = null
 var selected_path : NodePath = NodePath("")
@@ -33,8 +33,10 @@ var plusButton = {'image' = "res://art/plusButton.png"}
 func get_rarity_price(rarity: String) -> int: 
 	# Checks rarity of the rocks and return the price depending on the rarity
 	if rarity == "rare":
-		return coin["rare"]
-	return coin["common"]
+		#return coin["rare"]
+		return randi_range(18, 25)
+	#return coin["common"]
+	return randi_range(8, 12)
 
 func start_selling_timer(shelf_name: String, rarity: String) -> void:
 	# Starts a timer after a rock has been displayed
