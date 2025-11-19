@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="1_qoiri"]
 [ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="2_a1mrk"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="4_n5486"]
-[ext_resource type="Texture2D" uid="uid://cqdamxotmewlb" path="res://art/necklace_temp.jpg" id="4_oun7a"]
+[ext_resource type="Texture2D" uid="uid://cg3xkswwfw46t" path="res://art/purpleGemNecklace.png" id="4_oun7a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5486"]
 texture = ExtResource("2_a1mrk")
@@ -46,13 +46,19 @@ offset_bottom = 180.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_n5486")
 
 [node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/necklace"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-offset_left = 40.0
-offset_top = 40.0
-offset_right = 140.0
-offset_bottom = 140.0
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
 grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("4_oun7a")
