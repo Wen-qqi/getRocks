@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crr7cfmqil11r"
-path="res://.godot/imported/silverBar.png-e11cc0ec77677ab892549e7dcfdbfdda.ctex"
+uid="uid://cqdamxotmewlb"
+path="res://.godot/imported/necklace_temp.jpg-d5c0a094b9c6ce33425bd1c5a5dc0772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/silverBar.png"
-dest_files=["res://.godot/imported/silverBar.png-e11cc0ec77677ab892549e7dcfdbfdda.ctex"]
+source_file="res://art/necklace_temp.jpg"
+dest_files=["res://.godot/imported/necklace_temp.jpg-d5c0a094b9c6ce33425bd1c5a5dc0772.ctex"]
 
 [params]
 

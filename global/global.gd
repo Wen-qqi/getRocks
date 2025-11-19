@@ -11,7 +11,12 @@ var blue = {"count": 0, "rarity": "common", "image": "res://art/blueGemStone4.pn
 var purple = {"count": 0, "rarity": "common", "image": "res://art/purpleGemStone.png"}
 var sunset = {"count": 0, "rarity": "rare", "image": "res://art/colorfulGemStone1.png"}
 var sherbet = {"count": 0, "rarity": "rare", "image": "res://art/purpleGemStone4.png"}
-var coin = {'image' = "res://art/coin.png"}
+
+var silver = {"count": 0, "image": "res://art/silverBar.png"}
+
+
+var coin = {"common" = 10, "rare" = 20, 'image' = "res://art/coin.png"}
+
 
 var selected_rock : Texture = null
 var selected_path : NodePath = NodePath("")

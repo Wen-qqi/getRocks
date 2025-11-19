@@ -1,0 +1,119 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxl5msyr66n4k"]
+
+[ext_resource type="Script" uid="uid://cwflolwuuuwg" path="res://crafting_page.gd" id="1_a1mrk"]
+[ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="1_qoiri"]
+[ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="2_a1mrk"]
+[ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="4_n5486"]
+[ext_resource type="Texture2D" uid="uid://cqdamxotmewlb" path="res://art/necklace_temp.jpg" id="4_oun7a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5486"]
+texture = ExtResource("2_a1mrk")
+
+[node name="Crafting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a1mrk")
+
+[node name="MarginLeft" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 1080.0
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginLeft"]
+layout_mode = 2
+theme = ExtResource("1_qoiri")
+
+[node name="CraftButtons" type="GridContainer" parent="MarginLeft/PanelContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 5
+
+[node name="necklace" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/necklace"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n5486")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/necklace"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 140.0
+offset_bottom = 140.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_oun7a")
+expand_mode = 2
+
+[node name="blank" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/blank"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n5486")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/blank"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 140.0
+offset_bottom = 140.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 2
+
+[node name="MarginRight" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 960.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginRight"]
+layout_mode = 2
+
+[node name="IconsContainer" type="HBoxContainer" parent="MarginRight/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CountsContainer" type="HBoxContainer" parent="MarginRight/VBoxContainer"]
+layout_mode = 2
+
+[node name="Craft" type="Button" parent="MarginRight/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 100
+text = "CRAFT"
+
+[node name="ExitBuy" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1787.0
+offset_top = 24.0
+offset_right = 1894.0
+offset_bottom = 132.0
+text = "EXIT"
+icon = ExtResource("4_n5486")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="ExitBuy" to="." method="on_exit_pressed"]

@@ -45,7 +45,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -199.0
-offset_right = 676.0
+offset_right = 1338.0
 grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -105,8 +105,37 @@ expand_mode = 2
 
 [node name="Label" type="Label" parent="Menu/CollectionFrame/Collection/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "COLLECTION"
+
+[node name="CraftFrame" type="PanelContainer" parent="Menu"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_272bh")
+
+[node name="Craft" type="Button" parent="Menu/CraftFrame"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/CraftFrame/Craft"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Menu/CraftFrame/Craft/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_h2yge")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Menu/CraftFrame/Craft/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "CRAFT"
 
 [node name="OpenExitMenu" type="Button" parent="."]
 offset_left = 1793.0
@@ -377,6 +406,7 @@ custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 texture = ExtResource("5_lquwl")
 
+[connection signal="pressed" from="Menu/CraftFrame/Craft" to="." method="onCraftPressed"]
 [connection signal="pressed" from="MarginContainer/GridContainer/Shelf1/Button" to="." method="on_shelf1_button_pressed"]
 [connection signal="pressed" from="MarginContainer/GridContainer/Shelf2/Button" to="." method="shelfbutton2Pressed"]
 [connection signal="pressed" from="MarginContainer/GridContainer/Shelf3/Button" to="." method="_on_shelfButton3_pressed"]

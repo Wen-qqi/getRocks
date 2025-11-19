@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b3123bmfiqxi6"]
+[gd_scene load_steps=22 format=3 uid="uid://b3123bmfiqxi6"]
 
 [ext_resource type="Script" uid="uid://8ql1uta5sx87" path="res://collection_page.gd" id="1_os4ut"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="2_6n7rd"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://dga6mhmqroxe4" path="res://art/colorfulGemStone1.png" id="14_noigf"]
 [ext_resource type="Script" uid="uid://b5fxxx0yxj1a2" path="res://collection-counts/sherbet_count.gd" id="15_4bkbs"]
 [ext_resource type="Texture2D" uid="uid://oit3lx0cjymw" path="res://art/purpleGemStone4.png" id="16_6yh3s"]
+[ext_resource type="Script" uid="uid://m4h4n05pxpt" path="res://collection-counts/silver_count.gd" id="18_6yh3s"]
+[ext_resource type="Texture2D" uid="uid://crr7cfmqil11r" path="res://art/silverBar.png" id="18_b8kj7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ri6"]
 texture = ExtResource("3_yo600")
@@ -218,6 +220,30 @@ theme = ExtResource("2_thgsj")
 theme_override_font_sizes/font_size = 50
 text = "123456"
 script = ExtResource("15_4bkbs")
+
+[node name="Silver" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Silver"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Silver/ItemFrame"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("18_b8kj7")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SilverCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Silver"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme = ExtResource("2_thgsj")
+theme_override_font_sizes/font_size = 50
+text = "123456"
+script = ExtResource("18_6yh3s")
 
 [node name="ExitCollection" type="Button" parent="."]
 layout_mode = 0

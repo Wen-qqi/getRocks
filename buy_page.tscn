@@ -42,30 +42,15 @@ theme_override_constants/margin_bottom = 70
 layout_mode = 2
 theme = ExtResource("2_2ndei")
 
-[node name="TabContainer" type="TabContainer" parent="MarginBuy/PanelContainer"]
+[node name="ScrollItems" type="ScrollContainer" parent="MarginBuy/PanelContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
-current_tab = 0
-clip_tabs = false
 
-[node name="Rocks" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
-layout_mode = 2
-metadata/_tab_index = 0
-
-[node name="RockListings" type="ScrollContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Listings" type="VBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings"]
+[node name="Listings" type="VBoxContainer" parent="MarginBuy/PanelContainer/ScrollItems"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Listing1" type="PanelContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings"]
+[node name="Rock1" type="PanelContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings"]
 layout_mode = 2
 tooltip_text = "5x Rocks (10)
 Common: 100%
@@ -73,25 +58,25 @@ Common: 100%
 theme = ExtResource("2_2ndei")
 theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock1"]
 layout_mode = 2
 
-[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1/HBoxContainer"]
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock1/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_xhjy4")
 expand_mode = 2
 
-[node name="Description" type="Label" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1/HBoxContainer"]
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock1/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 90
 text = "   Tier I"
 
-[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing1/HBoxContainer"]
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock1/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_5q6ws")
 
-[node name="Listing2" type="PanelContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings"]
+[node name="Rock2" type="PanelContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings"]
 layout_mode = 2
 tooltip_text = "5x Rocks (25)
 Common: 80%
@@ -100,23 +85,58 @@ Rare: 20%
 theme = ExtResource("2_2ndei")
 theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock2"]
 layout_mode = 2
 
-[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2/HBoxContainer"]
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock2/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("6_30ea1")
 expand_mode = 2
 
-[node name="Description" type="Label" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2/HBoxContainer"]
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock2/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 90
 text = "   Tier II"
 
-[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/TabContainer/Rocks/RockListings/Listings/Listing2/HBoxContainer"]
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Rock2/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_5q6ws")
+
+[node name="Material1" type="PanelContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings"]
+layout_mode = 2
+tooltip_text = "3x Silver Material (24)"
+theme = ExtResource("2_2ndei")
+theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1"]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_30ea1")
+expand_mode = 2
+
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 90
+text = "   Silver x3"
+
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_5q6ws")
+
+[node name="TabContainer" type="TabContainer" parent="MarginBuy/PanelContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+current_tab = 0
+clip_tabs = false
+
+[node name="Rocks" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="Materials" type="Label" parent="MarginBuy/PanelContainer/TabContainer"]
 visible = false
@@ -206,3 +226,7 @@ text = "EXIT"
 icon = ExtResource("6_2ndei")
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Rock1/HBoxContainer/BuyItem" to="." method="_on_rock_i_pressed"]
+[connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Rock2/HBoxContainer/BuyItem" to="." method="_on_rock_ii_pressed"]
+[connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer/BuyItem" to="." method="_on_silver_pressed"]

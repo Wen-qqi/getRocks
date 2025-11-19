@@ -3,7 +3,6 @@ extends Node
 @onready var exitMenuButton = $OpenExitMenu as Button
 @onready var buyButton = $Menu/BuyFrame/Buy as Button
 @onready var collectionButton = $Menu/CollectionFrame/Collection as Button
-@onready var testButton = $TestingButton as Button
 
 func _ready():
 	handle_connecting_signals()
@@ -18,12 +17,9 @@ func onBuyPressed() -> void:
 	
 func onCollectionPressed() -> void:
 	get_tree().change_scene_to_file("res://collection_page.tscn")
-	
-func onTestPressed() -> void:
-	var rand = str(randi() % 10) # gets a number from 0-9
-	testButton.set_text(rand)
-	
 
+func onCraftPressed() -> void:
+	get_tree().change_scene_to_file("res://crafting_page.tscn")
 
 func on_shelf1_button_pressed() -> void:
 	handle_shelf_pressed("shelf1")
@@ -35,7 +31,6 @@ func handle_connecting_signals():
 	exitMenuButton.button_down.connect(onExitMenuPressed)
 	buyButton.button_down.connect(onBuyPressed)
 	collectionButton.button_down.connect(onCollectionPressed)
-	testButton.button_down.connect(onTestPressed)
 	
 func _on_shelfButton3_pressed() -> void:
 	handle_shelf_pressed("shelf3")
