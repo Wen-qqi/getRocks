@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnapr3mqmsoh1"]
+[gd_scene load_steps=15 format=3 uid="uid://dnapr3mqmsoh1"]
 
 [ext_resource type="Script" uid="uid://bnoriikutjlr0" path="res://buy_page.gd" id="1_fjea7"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_2ndei"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="5_11egi"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="6_2ndei"]
 [ext_resource type="Texture2D" uid="uid://dga6mhmqroxe4" path="res://art/colorfulGemStone1.png" id="6_30ea1"]
+[ext_resource type="Texture2D" uid="uid://crr7cfmqil11r" path="res://art/silverBar.png" id="7_30ea1"]
 [ext_resource type="Script" uid="uid://wjf6uqop3o3o" path="res://global/balance.gd" id="8_11egi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjea7"]
@@ -114,7 +115,7 @@ layout_mode = 2
 
 [node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("6_30ea1")
+texture = ExtResource("7_30ea1")
 expand_mode = 2
 
 [node name="Description" type="Label" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
