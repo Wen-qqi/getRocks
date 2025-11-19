@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxl5msyr66n4k"]
+[gd_scene load_steps=8 format=3 uid="uid://cxl5msyr66n4k"]
 
 [ext_resource type="Script" uid="uid://cwflolwuuuwg" path="res://crafting_page.gd" id="1_a1mrk"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="1_qoiri"]
 [ext_resource type="Texture2D" uid="uid://0h60uhj7cgrt" path="res://art/frame1.png" id="2_a1mrk"]
+[ext_resource type="Texture2D" uid="uid://bek8wgnqiex1c" path="res://art/wall_2.png" id="2_h3aea"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="4_n5486"]
 [ext_resource type="Texture2D" uid="uid://cg3xkswwfw46t" path="res://art/purpleGemNecklace.png" id="4_oun7a"]
 
@@ -17,6 +18,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a1mrk")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_h3aea")
 
 [node name="MarginLeft" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -96,18 +103,29 @@ offset_bottom = 1080.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginRight"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="IconsContainer" type="HBoxContainer" parent="MarginRight/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="CountsContainer" type="HBoxContainer" parent="MarginRight/VBoxContainer"]
+[node name="ResultContainer" type="VBoxContainer" parent="MarginRight/VBoxContainer"]
 layout_mode = 2
 
-[node name="Craft" type="Button" parent="MarginRight/VBoxContainer"]
+[node name="CraftFrame" type="PanelContainer" parent="."]
 layout_mode = 2
+offset_left = 1307.0
+offset_top = 800.0
+offset_right = 1573.0
+offset_bottom = 979.0
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 12
+theme = ExtResource("1_qoiri")
+
+[node name="Craft" type="Button" parent="CraftFrame"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 100
 text = "CRAFT"
 
@@ -121,5 +139,17 @@ text = "EXIT"
 icon = ExtResource("4_n5486")
 icon_alignment = 1
 expand_icon = true
+
+[node name="FrameContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Frame" type="PanelContainer" parent="FrameContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_qoiri")
 
 [connection signal="pressed" from="ExitBuy" to="." method="on_exit_pressed"]
