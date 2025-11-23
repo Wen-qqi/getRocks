@@ -20,8 +20,8 @@
 [ext_resource type="Script" uid="uid://b5fxxx0yxj1a2" path="res://collection-counts/sherbet_count.gd" id="17_p3ubq"]
 [ext_resource type="Texture2D" uid="uid://brlnxymqe3xn3" path="res://art/purpleGemEarrings.png" id="18_p3ubq"]
 [ext_resource type="Texture2D" uid="uid://cg3xkswwfw46t" path="res://art/purpleGemNecklace.png" id="19_4cl6i"]
-[ext_resource type="Texture2D" uid="uid://crck87qgcsy42" path="res://art/blueEarrings.png" id="20_4cl6i"]
-[ext_resource type="Texture2D" uid="uid://cwl2nl8stotwv" path="res://art/goldNecklace1.png" id="21_wvknr"]
+[ext_resource type="Texture2D" uid="uid://bkd08chhp5v38" path="res://art/blue_earrings.png" id="20_4cl6i"]
+[ext_resource type="Texture2D" uid="uid://bt6a0ni20cbtq" path="res://art/red_necklace.png" id="21_wvknr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ri6"]
 texture = ExtResource("3_71lm7")
