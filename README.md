@@ -11,10 +11,10 @@ GetRocks is a collectible and crafting game where players can run their own rock
 The goal of the game is run a successful rock shop, craft exquisite jewelry, and collect a variety of unique rocks.
 
 ## How to Play
-1. Buy loot boxes to start your collection
-2. Display your rocks to sell it 
-3. Craft jewelry by using the rocks and store bought materials
-4. Expand your collection by buying more rocks and crafting jewelry
+**1.** Buy loot boxes to start your collection
+**2.** Display your rocks to sell it 
+**3.** Craft jewelry by using the rocks and store bought materials
+**4.** Expand your collection by buying more rocks and crafting jewelry
 
 ## Credits
 - Game developed by Wen Fan and Melissa Chen
