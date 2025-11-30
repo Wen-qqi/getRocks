@@ -41,7 +41,7 @@ script = ExtResource("1_wedtt")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
-layout_mode = 2
+layout_mode = 0
 offset_top = 4.0
 offset_bottom = 4.0
 theme_override_constants/margin_left = 100
@@ -279,27 +279,27 @@ horizontal_alignment = 2
 vertical_alignment = 2
 script = ExtResource("17_p3ubq")
 
-[node name="Sherbet2" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="PurpleEarring" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet2"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet2/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet2/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("18_p3ubq")
 stretch_mode = 5
 
-[node name="SherbetCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet2"]
+[node name="PurpleEarringCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -310,27 +310,27 @@ horizontal_alignment = 2
 vertical_alignment = 2
 script = ExtResource("17_p3ubq")
 
-[node name="Sherbet3" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="PurpleNecklace" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet3"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet3/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet3/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("19_4cl6i")
 stretch_mode = 5
 
-[node name="SherbetCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet3"]
+[node name="PurpleNecklaceCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -341,27 +341,27 @@ horizontal_alignment = 2
 vertical_alignment = 2
 script = ExtResource("17_p3ubq")
 
-[node name="Sherbet4" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="BlueEarring" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet4"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet4/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet4/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("20_4cl6i")
 stretch_mode = 5
 
-[node name="SherbetCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet4"]
+[node name="BlueEarringCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -372,27 +372,27 @@ horizontal_alignment = 2
 vertical_alignment = 2
 script = ExtResource("17_p3ubq")
 
-[node name="Sherbet5" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="RedNecklace" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet5"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet5/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet5/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("21_wvknr")
 stretch_mode = 5
 
-[node name="SherbetCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet5"]
+[node name="RedNecklaceCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -414,14 +414,10 @@ icon = ExtResource("14_0g0ms")
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button" to="." method="_on_redButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button" to="." method="_on_yellowButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button" to="." method="_on_greenButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button" to="." method="_on_blueButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button" to="." method="_on_purpleButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset/Button" to="." method="_on_sunsetButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet/Button" to="." method="_on_sherbetButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet2/Button" to="." method="_on_sherbetButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet3/Button" to="." method="_on_sherbetButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet4/Button" to="." method="_on_sherbetButton_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet5/Button" to="." method="_on_sherbetButton_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedRock/Button" to="." method="on_rock_button_pressed" binds= ["red"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/YellowRock/Button" to="." method="on_rock_button_pressed" binds= ["yellow"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/GreenRock/Button" to="." method="on_rock_button_pressed" binds= ["green"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueRock/Button" to="." method="on_rock_button_pressed" binds= ["blue"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button" to="." method="on_rock_button_pressed" binds= ["purple"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset/Button" to="." method="on_rock_button_pressed" binds= ["sunset"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet/Button" to="." method="on_rock_button_pressed" binds= ["sherbet"]]
