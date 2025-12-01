@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dgc3w4naidone"]
+[gd_scene load_steps=28 format=3 uid="uid://dgc3w4naidone"]
 
 [ext_resource type="Script" uid="uid://0yaa0t2icjlo" path="res://display_page.gd" id="1_wedtt"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_5e1ec"]
@@ -20,8 +20,12 @@
 [ext_resource type="Script" uid="uid://b5fxxx0yxj1a2" path="res://collection-counts/sherbet_count.gd" id="17_p3ubq"]
 [ext_resource type="Texture2D" uid="uid://brlnxymqe3xn3" path="res://art/purpleGemEarrings.png" id="18_p3ubq"]
 [ext_resource type="Texture2D" uid="uid://cg3xkswwfw46t" path="res://art/purpleGemNecklace.png" id="19_4cl6i"]
+[ext_resource type="Script" uid="uid://d1ovp1gx228in" path="res://collection-counts/earrings_purple_count.gd" id="19_fhs30"]
 [ext_resource type="Texture2D" uid="uid://bkd08chhp5v38" path="res://art/blue_earrings.png" id="20_4cl6i"]
+[ext_resource type="Script" uid="uid://dhvlfak8vd6g6" path="res://collection-counts/necklace_purple_count.gd" id="21_0g0ms"]
 [ext_resource type="Texture2D" uid="uid://bt6a0ni20cbtq" path="res://art/red_necklace.png" id="21_wvknr"]
+[ext_resource type="Script" uid="uid://e4o2g5btvpyh" path="res://collection-counts/earrings_blue_count.gd" id="23_wc7wj"]
+[ext_resource type="Script" uid="uid://c0c7plxkc65ju" path="res://collection-counts/necklace_red_count.gd" id="25_5r2nh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_52ri6"]
 texture = ExtResource("3_71lm7")
@@ -279,27 +283,27 @@ horizontal_alignment = 2
 vertical_alignment = 2
 script = ExtResource("17_p3ubq")
 
-[node name="PurpleEarring" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="EarringsPurple" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsPurple"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsPurple/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsPurple/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("18_p3ubq")
 stretch_mode = 5
 
-[node name="PurpleEarringCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleEarring"]
+[node name="EarringsPurpleCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsPurple"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -308,29 +312,29 @@ theme_override_font_sizes/font_size = 50
 text = "123456"
 horizontal_alignment = 2
 vertical_alignment = 2
-script = ExtResource("17_p3ubq")
+script = ExtResource("19_fhs30")
 
-[node name="PurpleNecklace" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="NecklacePurple" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklacePurple"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklacePurple/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklacePurple/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("19_4cl6i")
 stretch_mode = 5
 
-[node name="PurpleNecklaceCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleNecklace"]
+[node name="NecklacePurpleCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklacePurple"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -339,29 +343,29 @@ theme_override_font_sizes/font_size = 50
 text = "123456"
 horizontal_alignment = 2
 vertical_alignment = 2
-script = ExtResource("17_p3ubq")
+script = ExtResource("21_0g0ms")
 
-[node name="BlueEarring" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="EarringsBlue" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsBlue"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsBlue/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsBlue/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("20_4cl6i")
 stretch_mode = 5
 
-[node name="BlueEarringCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/BlueEarring"]
+[node name="EarringsBlueCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsBlue"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -370,29 +374,29 @@ theme_override_font_sizes/font_size = 50
 text = "123456"
 horizontal_alignment = 2
 vertical_alignment = 2
-script = ExtResource("17_p3ubq")
+script = ExtResource("23_wc7wj")
 
-[node name="RedNecklace" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
+[node name="NecklaceRed" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace"]
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklaceRed"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 
-[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace/Button"]
+[node name="ItemFrame" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklaceRed/Button"]
 layout_mode = 0
 offset_right = 170.0
 offset_bottom = 170.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_52ri6")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace/Button/ItemFrame"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklaceRed/Button/ItemFrame"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 texture = ExtResource("21_wvknr")
 stretch_mode = 5
 
-[node name="RedNecklaceCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/RedNecklace"]
+[node name="NecklaceRedCount" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklaceRed"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -401,7 +405,7 @@ theme_override_font_sizes/font_size = 50
 text = "123456"
 horizontal_alignment = 2
 vertical_alignment = 2
-script = ExtResource("17_p3ubq")
+script = ExtResource("25_5r2nh")
 
 [node name="ExitCollection" type="Button" parent="."]
 layout_mode = 0

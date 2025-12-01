@@ -35,7 +35,7 @@ func _on_rock_sold(shelf_name: String) -> void:
 			Global.shelf_rocks[shelf_name] = shelf_data
 
 func on_rock_button_pressed(color: String) -> void:
-	var data = Global.get(color)
+	var data = Inventory.get(color)
 	if data["count"] > 0:
 		data["count"] -= 1
 		assign_rock(load(data["image"]), data["rarity"])

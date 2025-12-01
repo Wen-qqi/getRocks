@@ -7,7 +7,7 @@ var rarities_ii = {"common" : 8, "rare" : 2}
 
 var rng = RandomNumberGenerator.new()
 
-func get_random(rarity):
+func get_random_rock(rarity):
 	rng.randomize()
 
 	var weighted_sum = 0

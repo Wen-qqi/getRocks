@@ -1,4 +1,4 @@
 extends Label
 
 func _process(_delta):
-	self.text = str(Global.silver["count"])
+	self.text = str(Inventory.silver["count"])

@@ -11,25 +11,30 @@ func on_exit_pressed() -> void:
 	set_process(false)
 
 func _on_rock_i_pressed() -> void:
-	if Global.balance >= 10:
-		Global.balance -= 10
+	if Inventory.balance >= 10:
+		Inventory.balance -= 10
 		var count = 5
 		while count > 0:
 			count -= 1
-			var rock = Random.get_random(Random.common)
-			Global[rock]["count"] += 1
+			var rock = Random.get_random_rock(Random.common)
+			Inventory[rock]["count"] += 1
 
 func _on_rock_ii_pressed() -> void:
-	if Global.balance >= 25:
-		Global.balance -= 25
+	if Inventory.balance >= 25:
+		Inventory.balance -= 25
 		var count = 5
 		while count > 0:
 			count -= 1
-			var rarity = Random.get_random(Random.rarities_ii)
-			var rock = Random.get_random(Random[rarity])
-			Global[rock]["count"] += 1
+			var rarity = Random.get_random_rock(Random.rarities_ii)
+			var rock = Random.get_random_rock(Random[rarity])
+			Inventory[rock]["count"] += 1
 
 func _on_silver_pressed() -> void:
-	if Global.balance >= 24:
-		Global.balance -= 24
-		Global.silver["count"] += 3
+	if Inventory.balance >= 24:
+		Inventory.balance -= 24
+		Inventory.silver["count"] += 3
+
+func _on_gold_pressed() -> void:
+	if Inventory.balance >= 30:
+		Inventory.balance -= 30
+		Inventory.gold["count"] += 3

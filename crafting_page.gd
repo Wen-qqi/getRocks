@@ -8,15 +8,17 @@ func on_exit_pressed() -> void:
 @onready var icons_container = $MarginRight/VBoxContainer/IconsContainer
 
 var PanelScene := preload("res://frame.tscn")
+var crafting = ""
 
 func _ready():
 	# Connect every button
 	for b in craft_buttons.get_children():
-		b.pressed.connect(_on_craft_button_pressed.bind(b))
+		b.pressed.connect(_on_craftable_button_pressed.bind(b))
 
 
-func _on_craft_button_pressed(button: Button):
+func _on_craftable_button_pressed(button: Button):
 	var item_id = button.name
+	crafting = button.name
 	show_recipe(item_id)
 
 
@@ -28,14 +30,14 @@ func show_recipe(item_id: String):
 
 	for material in Recipes[item_id]:
 		var amount_needed = Recipes[item_id][material]	
-		var amount_have = Global[material]["count"]
+		var amount_have = Inventory[material]["count"]
 
 		var vbox = VBoxContainer.new()
 		var panel = $FrameContainer/Frame.duplicate()
 
 		# --- ICON ---
 		var icon = TextureRect.new()
-		icon.texture = load(Global[material]["image"]) # example path
+		icon.texture = load(Inventory[material]["image"]) # example path
 		icon.stretch_mode = TextureRect.STRETCH_SCALE
 		icon.expand_mode = TextureRect.EXPAND_FIT_WIDTH
 		panel.add_child(icon)
@@ -50,3 +52,16 @@ func show_recipe(item_id: String):
 		vbox.add_child(label)
 		
 		icons_container.add_child(vbox)
+
+func _on_craft_pressed() -> void:
+	if crafting == "":
+		return
+	for item in Recipes[crafting].keys():
+		if Inventory[item]["count"] < Recipes[crafting][item]:
+			return
+	
+	for item in Recipes[crafting]:
+		Inventory[item]["count"] -= Recipes[crafting][item]
+	Inventory[crafting]["count"] += 1
+	show_recipe(crafting)
+	

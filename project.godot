@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 Global="*res://global/global.gd"
 Random="*res://global/random.gd"
-Recipes="*res://recipes.gd"
-Inventory="*res://inventory.gd"
+Recipes="*res://global/recipes.gd"
+Inventory="*res://global/inventory.gd"
 
 [display]
 

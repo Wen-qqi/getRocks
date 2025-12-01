@@ -1,5 +1,7 @@
 extends Node
 
+var balance = 100
+
 var red = {"count": 0, "rarity": "common", "image": "res://art/redGemStone.png"}
 var yellow = {"count": 0, "rarity": "common", "image": "res://art/yellowGemStone.png"}
 var green = {"count": 0, "rarity": "common", "image": "res://art/GreenGemStone.png"}
@@ -9,3 +11,9 @@ var sunset = {"count": 0, "rarity": "rare", "image": "res://art/colorfulGemStone
 var sherbet = {"count": 0, "rarity": "rare", "image": "res://art/purpleGemStone4.png"}
 
 var silver = {"count": 0, "image": "res://art/silverBar.png"}
+var gold = {"count": 0, "image": "res://art/goldbar-pixilart.png"}
+
+var earrings_purple = {"count": 0}
+var necklace_purple = {"count": 0}
+var earrings_blue = {"count": 0}
+var necklace_red = {"count": 0}
