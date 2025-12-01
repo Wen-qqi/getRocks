@@ -57,7 +57,7 @@ func collect_coins(shelf_name: String) -> void:
 	if data != null and data["state"] == "sold": # Checks if it's sold
 		var rarity = data["rarity"] 
 		var price = Global.get_rarity_price(rarity) # Get the price of the rarity 
-		Global.balance += price # Add coin to balance
+		Inventory.balance += price # Add coin to balance
 
 	# Reset shelf back to plusButton texture
 	var plus_texture = load(Global.plusButton["image"]) 

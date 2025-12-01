@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxl5msyr66n4k"]
+[gd_scene load_steps=11 format=3 uid="uid://cxl5msyr66n4k"]
 
 [ext_resource type="Script" uid="uid://cwflolwuuuwg" path="res://crafting_page.gd" id="1_a1mrk"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="1_qoiri"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bek8wgnqiex1c" path="res://art/wall_2.png" id="2_h3aea"]
 [ext_resource type="Texture2D" uid="uid://dtc53n1imjkkp" path="res://art/exitButton.png" id="4_n5486"]
 [ext_resource type="Texture2D" uid="uid://cg3xkswwfw46t" path="res://art/purpleGemNecklace.png" id="4_oun7a"]
+[ext_resource type="Texture2D" uid="uid://brlnxymqe3xn3" path="res://art/purpleGemEarrings.png" id="5_o2tk1"]
+[ext_resource type="Texture2D" uid="uid://bkd08chhp5v38" path="res://art/blue_earrings.png" id="7_lhsgc"]
+[ext_resource type="Texture2D" uid="uid://bt6a0ni20cbtq" path="res://art/red_necklace.png" id="8_0cgt1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5486"]
 texture = ExtResource("2_a1mrk")
@@ -36,23 +39,55 @@ theme = ExtResource("1_qoiri")
 
 [node name="CraftButtons" type="GridContainer" parent="MarginLeft/PanelContainer"]
 layout_mode = 2
-theme_override_constants/h_separation = 100
-theme_override_constants/v_separation = 100
-columns = 5
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 4
 
-[node name="necklace" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
+[node name="earrings_purple" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/necklace"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/earrings_purple"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 0
 offset_right = 180.0
 offset_bottom = 180.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_n5486")
 
-[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/necklace"]
+[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/earrings_purple"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_o2tk1")
+expand_mode = 2
+
+[node name="necklace_purple" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/necklace_purple"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n5486")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/necklace_purple"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 1
 anchors_preset = 8
@@ -71,28 +106,66 @@ size_flags_vertical = 4
 texture = ExtResource("4_oun7a")
 expand_mode = 2
 
-[node name="blank" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
+[node name="earrings_blue" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/blank"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/earrings_blue"]
 custom_minimum_size = Vector2(180, 180)
 layout_mode = 0
 offset_right = 180.0
 offset_bottom = 180.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_n5486")
 
-[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/blank"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-offset_left = 40.0
-offset_top = 40.0
-offset_right = 140.0
-offset_bottom = 140.0
+[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/earrings_blue"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
 grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture = ExtResource("7_lhsgc")
+expand_mode = 2
+
+[node name="necklace_red" type="Button" parent="MarginLeft/PanelContainer/CraftButtons"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginLeft/PanelContainer/CraftButtons/necklace_red"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n5486")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginLeft/PanelContainer/CraftButtons/necklace_red"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_0cgt1")
 expand_mode = 2
 
 [node name="MarginRight" type="MarginContainer" parent="."]
@@ -152,4 +225,5 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_qoiri")
 
+[connection signal="pressed" from="CraftFrame/Craft" to="." method="_on_craft_pressed"]
 [connection signal="pressed" from="ExitBuy" to="." method="on_exit_pressed"]

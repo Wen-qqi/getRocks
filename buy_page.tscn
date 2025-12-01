@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dnapr3mqmsoh1"]
+[gd_scene load_steps=16 format=3 uid="uid://dnapr3mqmsoh1"]
 
 [ext_resource type="Script" uid="uid://bnoriikutjlr0" path="res://buy_page.gd" id="1_fjea7"]
 [ext_resource type="Theme" uid="uid://cjx3jojv5j0w1" path="res://da-theme.tres" id="2_2ndei"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dga6mhmqroxe4" path="res://art/colorfulGemStone1.png" id="6_30ea1"]
 [ext_resource type="Texture2D" uid="uid://crr7cfmqil11r" path="res://art/silverBar.png" id="7_30ea1"]
 [ext_resource type="Script" uid="uid://wjf6uqop3o3o" path="res://global/balance.gd" id="8_11egi"]
+[ext_resource type="Texture2D" uid="uid://bnpbut1184qgq" path="res://art/goldbar-pixilart.png" id="8_o7hlw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjea7"]
 texture = ExtResource("2_rrft4")
@@ -104,27 +105,53 @@ text = "   Tier II"
 layout_mode = 2
 icon = ExtResource("3_5q6ws")
 
-[node name="Material1" type="PanelContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings"]
+[node name="Silver" type="PanelContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings"]
 layout_mode = 2
 tooltip_text = "3x Silver Material (24)"
 theme = ExtResource("2_2ndei")
 theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Silver"]
 layout_mode = 2
+tooltip_text = "3 Silver Material (24)"
 
-[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Silver/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("7_30ea1")
 expand_mode = 2
 
-[node name="Description" type="Label" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Silver/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 90
 text = "   Silver x3"
 
-[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer"]
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Silver/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_5q6ws")
+
+[node name="Gold" type="PanelContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings"]
+layout_mode = 2
+tooltip_text = "3x Silver Material (24)"
+theme = ExtResource("2_2ndei")
+theme_override_styles/panel = SubResource("StyleBoxTexture_fjea7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Gold"]
+layout_mode = 2
+tooltip_text = "3 Gold Material (30)"
+
+[node name="Image" type="TextureRect" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Gold/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_o7hlw")
+expand_mode = 2
+
+[node name="Description" type="Label" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Gold/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 90
+text = "   Gold x3"
+
+[node name="BuyItem" type="Button" parent="MarginBuy/PanelContainer/ScrollItems/Listings/Gold/HBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_5q6ws")
 
@@ -230,4 +257,5 @@ expand_icon = true
 
 [connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Rock1/HBoxContainer/BuyItem" to="." method="_on_rock_i_pressed"]
 [connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Rock2/HBoxContainer/BuyItem" to="." method="_on_rock_ii_pressed"]
-[connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Material1/HBoxContainer/BuyItem" to="." method="_on_silver_pressed"]
+[connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Silver/HBoxContainer/BuyItem" to="." method="_on_silver_pressed"]
+[connection signal="pressed" from="MarginBuy/PanelContainer/ScrollItems/Listings/Gold/HBoxContainer/BuyItem" to="." method="_on_gold_pressed"]

@@ -12,15 +12,15 @@ config_version=5
 
 config/name="Rocks"
 run/main_scene="uid://bpj1rghvcvmno"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://global/global.gd"
 Random="*res://global/random.gd"
-Recipes="*res://recipes.gd"
-Inventory="*res://inventory.gd"
+Recipes="*res://global/recipes.gd"
+Inventory="*res://global/inventory.gd"
 
 [display]
 
