@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dga6mhmqroxe4" path="res://art/colorfulGemStone1.png" id="14_noigf"]
 [ext_resource type="Script" uid="uid://b5fxxx0yxj1a2" path="res://collection-counts/sherbet_count.gd" id="15_4bkbs"]
 [ext_resource type="Texture2D" uid="uid://oit3lx0cjymw" path="res://art/purpleGemStone4.png" id="16_6yh3s"]
-[ext_resource type="Script" path="res://collection-counts/silver_count.gd" id="18_6yh3s"]
+[ext_resource type="Script" uid="uid://m4h4n05pxpt" path="res://collection-counts/silver_count.gd" id="18_6yh3s"]
 [ext_resource type="Texture2D" uid="uid://crr7cfmqil11r" path="res://art/silverBar.png" id="18_b8kj7"]
 [ext_resource type="Texture2D" uid="uid://bnpbut1184qgq" path="res://art/goldbar-pixilart.png" id="20_nmo0f"]
 

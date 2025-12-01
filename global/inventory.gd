@@ -13,7 +13,7 @@ var sherbet = {"count": 0, "rarity": "rare", "image": "res://art/purpleGemStone4
 var silver = {"count": 0, "image": "res://art/silverBar.png"}
 var gold = {"count": 0, "image": "res://art/goldbar-pixilart.png"}
 
-var earrings_purple = {"count": 0}
-var necklace_purple = {"count": 0}
-var earrings_blue = {"count": 0}
-var necklace_red = {"count": 0}
+var earrings_purple = {"count": 0, "rarity": "rare", "image": "res://art/purpleGemEarrings.png"}
+var necklace_purple = {"count": 0, "rarity": "rare", "image": "res://art/purpleGemNecklace.png"}
+var earrings_blue = {"count": 0, "rarity": "rare", "image": "res://art/blue_earrings.png"}
+var necklace_red = {"count": 0, "rarity": "rare", "image": "res://art/red_necklace.png"}

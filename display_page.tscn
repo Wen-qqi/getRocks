@@ -425,3 +425,7 @@ expand_icon = true
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/PurpleRock/Button" to="." method="on_rock_button_pressed" binds= ["purple"]]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sunset/Button" to="." method="on_rock_button_pressed" binds= ["sunset"]]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/Sherbet/Button" to="." method="on_rock_button_pressed" binds= ["sherbet"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsPurple/Button" to="." method="on_rock_button_pressed" binds= ["earrings_purple"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklacePurple/Button" to="." method="on_rock_button_pressed" binds= ["necklace_purple"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/EarringsBlue/Button" to="." method="on_rock_button_pressed" binds= ["earrings_blue"]]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/GridContainer/NecklaceRed/Button" to="." method="on_rock_button_pressed" binds= ["necklace_red"]]
