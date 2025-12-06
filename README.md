@@ -12,6 +12,7 @@ The goal of the game is run a successful rock shop, craft exquisite jewelry, and
 
 ## How to Play
 **1.** Buy loot boxes to build your rock collection
+
 **2.** Display your rocks to sell it and earn more money
 
 **3.** Craft jewelry by using the rocks and purchased materials
